@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>H3AD — whoami · H3AD-SEC</title>
+  <title>H3AD/whoami</title>
   <meta name="description"
     content="H3AD — Cyber defense researcher. Threat intelligence, detection engineering, DFIR, and SOC automation.">
   <link rel="icon" href="https://h3ad-sec.github.io/logo-dark.png" type="image/png">
@@ -49,7 +49,9 @@
       padding: 0;
     }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       background: var(--bg);
@@ -62,24 +64,33 @@
       transition: background 0.3s, color 0.3s;
     }
 
-    a { color: inherit; text-decoration: none; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
     /* ── MATRIX CANVAS ── */
     #matrix-canvas {
       position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       z-index: 0;
       pointer-events: none;
       opacity: 0.18;
     }
 
-    body.light #matrix-canvas { opacity: 0.12; }
+    body.light #matrix-canvas {
+      opacity: 0.12;
+    }
 
     /* ── NAV ── */
     .nav {
       position: fixed;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       z-index: 50;
       background: rgba(8, 12, 18, 0.9);
       border-bottom: 1px solid var(--border);
@@ -115,7 +126,9 @@
       overflow: visible;
     }
 
-    .nav-links::-webkit-scrollbar { display: none; }
+    .nav-links::-webkit-scrollbar {
+      display: none;
+    }
 
     .nav-links a {
       font-family: 'Share Tech Mono';
@@ -190,7 +203,9 @@
       box-shadow: 0 0 8px var(--accent);
     }
 
-    body.light .toggle-thumb { transform: translateX(20px); }
+    body.light .toggle-thumb {
+      transform: translateX(20px);
+    }
 
     /* HAMBURGER */
     .hamburger {
@@ -218,7 +233,8 @@
       display: none;
       position: fixed;
       top: var(--nav-h);
-      left: 0; right: 0;
+      left: 0;
+      right: 0;
       background: var(--panel);
       border-bottom: 1px solid var(--border);
       z-index: 49;
@@ -227,7 +243,9 @@
       gap: 2px;
     }
 
-    .nav-drawer.open { display: flex; }
+    .nav-drawer.open {
+      display: flex;
+    }
 
     .nav-drawer a {
       font-size: 0.75rem;
@@ -244,7 +262,9 @@
       background: rgba(0, 255, 159, 0.04);
     }
 
-    .nav-drawer a.whoami { color: var(--accent); }
+    .nav-drawer a.whoami {
+      color: var(--accent);
+    }
 
     body.light .nav-drawer a:hover {
       background: rgba(0, 77, 184, 0.06);
@@ -277,10 +297,15 @@
     }
 
     .hero-title {
-      font-size: clamp(1.6rem, 4.5vw, 2.6rem);
+      font-size: clamp(1.2rem, 3.5vw, 2.4rem);
       color: var(--text);
       letter-spacing: 0.04em;
       line-height: 1.35;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 600px) {
+      .hero-title { white-space: normal; font-size: clamp(1.3rem, 6vw, 1.8rem); }
     }
 
     .hero-title span {
@@ -295,7 +320,6 @@
     .hero-sub {
       font-size: 0.72rem;
       color: var(--text-dim);
-      max-width: 520px;
       line-height: 1.9;
       letter-spacing: 0.04em;
     }
@@ -330,9 +354,17 @@
       border-radius: 50%;
     }
 
-    .tbar-dot.r { background: #ff5f57; }
-    .tbar-dot.y { background: #febc2e; }
-    .tbar-dot.g { background: #28c840; }
+    .tbar-dot.r {
+      background: #ff5f57;
+    }
+
+    .tbar-dot.y {
+      background: #febc2e;
+    }
+
+    .tbar-dot.g {
+      background: #28c840;
+    }
 
     .tbar-label {
       margin-left: auto;
@@ -353,8 +385,13 @@
       margin-bottom: 0.45rem;
     }
 
-    .t-line.gap { margin-bottom: 1.3rem; }
-    .t-line:last-child { margin-bottom: 0; }
+    .t-line.gap {
+      margin-bottom: 1.3rem;
+    }
+
+    .t-line:last-child {
+      margin-bottom: 0;
+    }
 
     .prompt {
       color: var(--accent);
@@ -375,9 +412,17 @@
       font-size: 0.76rem;
     }
 
-    .out-hl { color: var(--text-dim); }
-    .out-acc { color: var(--accent); }
-    .out-dim { color: var(--muted); }
+    .out-hl {
+      color: var(--text-dim);
+    }
+
+    .out-acc {
+      color: var(--accent);
+    }
+
+    .out-dim {
+      color: var(--muted);
+    }
 
     .cursor {
       display: inline-block;
@@ -390,8 +435,15 @@
     }
 
     @keyframes blink {
-      0%, 100% { opacity: 1 }
-      50% { opacity: 0 }
+
+      0%,
+      100% {
+        opacity: 1
+      }
+
+      50% {
+        opacity: 0
+      }
     }
 
     /* ── SECTION LABEL ── */
@@ -444,10 +496,17 @@
       letter-spacing: 0.02em;
     }
 
-    .bio .hl { color: var(--text-dim); }
-    .bio .acc { color: var(--accent); }
+    .bio .hl {
+      color: var(--text-dim);
+    }
 
-    .bio p + p { margin-top: 1.2rem; }
+    .bio .acc {
+      color: var(--accent);
+    }
+
+    .bio p+p {
+      margin-top: 1.2rem;
+    }
 
     /* ── GRID (domains) ── */
     .grid {
@@ -467,7 +526,9 @@
       cursor: default;
     }
 
-    .card:hover { background: var(--panel-alt); }
+    .card:hover {
+      background: var(--panel-alt);
+    }
 
     .card-icon {
       font-size: 18px;
@@ -489,7 +550,10 @@
     }
 
     /* ── PRINCIPLES ── */
-    .principles { display: flex; flex-direction: column; }
+    .principles {
+      display: flex;
+      flex-direction: column;
+    }
 
     .principle {
       display: flex;
@@ -499,7 +563,9 @@
       border-bottom: 1px solid var(--border-dim);
     }
 
-    .principle:last-child { border-bottom: none; }
+    .principle:last-child {
+      border-bottom: none;
+    }
 
     .p-num {
       color: var(--accent);
@@ -545,7 +611,8 @@
     .module-link::before {
       content: '';
       position: absolute;
-      top: 0; left: 0;
+      top: 0;
+      left: 0;
       width: 2px;
       height: 100%;
       background: var(--accent);
@@ -554,9 +621,17 @@
       transition: transform 0.2s ease;
     }
 
-    .module-link:hover { background: var(--panel-alt); }
-    .module-link:hover::before { transform: scaleY(1); }
-    .module-link:hover .ml-name { color: var(--accent); }
+    .module-link:hover {
+      background: var(--panel-alt);
+    }
+
+    .module-link:hover::before {
+      transform: scaleY(1);
+    }
+
+    .module-link:hover .ml-name {
+      color: var(--accent);
+    }
 
     .ml-name {
       color: var(--text-dim);
@@ -577,7 +652,9 @@
       transition: color 0.15s;
     }
 
-    .module-link:hover .ml-arrow { color: var(--accent); }
+    .module-link:hover .ml-arrow {
+      color: var(--accent);
+    }
 
     /* ── CONTACT SECTION ── */
     .contact-wrap {
@@ -595,7 +672,9 @@
       margin-bottom: 0.5rem;
     }
 
-    .contact-row:last-child { margin-bottom: 0; }
+    .contact-row:last-child {
+      margin-bottom: 0;
+    }
 
     .c-prompt {
       color: var(--accent);
@@ -621,8 +700,13 @@
       transition: border-color 0.2s;
     }
 
-    body.light .c-email { border-bottom-color: rgba(0, 77, 184, 0.3); }
-    .c-email:hover { border-color: var(--accent); }
+    body.light .c-email {
+      border-bottom-color: rgba(0, 77, 184, 0.3);
+    }
+
+    .c-email:hover {
+      border-color: var(--accent);
+    }
 
     .c-note {
       color: var(--muted);
@@ -661,8 +745,15 @@
     }
 
     @keyframes pulse {
-      0%, 100% { opacity: 1 }
-      50% { opacity: 0.3 }
+
+      0%,
+      100% {
+        opacity: 1
+      }
+
+      50% {
+        opacity: 0.3
+      }
     }
 
     /* ── FOOTER ── */
@@ -693,26 +784,51 @@
     }
 
     /* ── SCROLLBAR ── */
-    ::-webkit-scrollbar { width: 3px; }
-    ::-webkit-scrollbar-track { background: transparent; }
-    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
-    ::-webkit-scrollbar-thumb:hover { background: var(--muted-dim); }
+    ::-webkit-scrollbar {
+      width: 3px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--border);
+      border-radius: 2px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--muted-dim);
+    }
 
     /* NAV DROPDOWN */
-    .nav-item { position: relative; display: flex; align-items: center; }
+    .nav-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
     .nav-dropdown {
       display: none;
       position: absolute;
-      top: calc(100% + 6px);
+      top: 100%;
       left: 0;
       min-width: 120px;
+      padding-top: 6px;
+      z-index: 100;
+    }
+
+    .nav-dropdown-inner {
       background: var(--panel);
       border: 1px solid var(--border);
       border-radius: 4px;
       overflow: hidden;
-      z-index: 100;
     }
-    .nav-item:hover .nav-dropdown { display: block; }
+
+    .nav-item:hover .nav-dropdown {
+      display: block;
+    }
+
     .nav-links .nav-dropdown a {
       display: block;
       padding: 7px 12px;
@@ -723,14 +839,17 @@
       border-radius: 0;
       transition: 0.15s;
     }
+
     .nav-links .nav-dropdown a:hover {
       color: var(--accent);
       border-left-color: var(--accent);
       background: rgba(0, 255, 159, 0.04);
     }
+
     body.light .nav-links .nav-dropdown a:hover {
       background: rgba(0, 77, 184, 0.06);
     }
+
     .drawer-sub {
       padding-left: 1.8rem !important;
       font-size: 0.7rem !important;
@@ -739,15 +858,31 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
-      .nav-links { display: none; }
-      .hamburger { display: flex; }
+      .nav-links {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
     }
 
     @media (max-width: 640px) {
-      .page { padding: calc(var(--nav-h) + 1rem) 1.1rem 4rem; }
-      .hero { padding: 2rem 0 1.5rem; }
-      .terminal-body { padding: 1.2rem 1.25rem; }
-      footer { padding: 1.2rem 1.25rem; }
+      .page {
+        padding: calc(var(--nav-h) + 1rem) 1.1rem 4rem;
+      }
+
+      .hero {
+        padding: 2rem 0 1.5rem;
+      }
+
+      .terminal-body {
+        padding: 1.2rem 1.25rem;
+      }
+
+      footer {
+        padding: 1.2rem 1.25rem;
+      }
     }
   </style>
 </head>
@@ -774,7 +909,9 @@
       <div class="nav-item">
         <a href="https://h3ad-sec.github.io/h3ad-x/" target="_blank" rel="noopener">H3AD-X</a>
         <div class="nav-dropdown">
-          <a href="https://h3ad-sec.github.io/VERDIKT/" target="_blank" rel="noopener">VERDIKT</a>
+          <div class="nav-dropdown-inner">
+            <a href="https://h3ad-sec.github.io/VERDIKT/" target="_blank" rel="noopener">VERDIKT</a>
+          </div>
         </div>
       </div>
       <a href="https://YOUR-USERNAME.github.io/h3ad-ai/" target="_blank" rel="noopener">H3AD-AI</a>
@@ -795,23 +932,24 @@
 
   <!-- MOBILE DRAWER -->
   <div class="nav-drawer" id="navDrawer">
-    <a class="whoami" href="https://h3ad-sec.github.io/H3AD" target="_blank" rel="noopener"
-      onclick="closeDrawer()">H3AD &nbsp;↗</a>
-    <a href="https://h3ad-sec.github.io/h3ad-x/" target="_blank" rel="noopener"
-      onclick="closeDrawer()">H3AD-X &nbsp;↗</a>
-    <a href="https://h3ad-sec.github.io/VERDIKT/" target="_blank" rel="noopener" onclick="closeDrawer()" class="drawer-sub">↳ VERDIKT &nbsp;↗</a>
-    <a href="https://YOUR-USERNAME.github.io/h3ad-ai/" target="_blank" rel="noopener"
-      onclick="closeDrawer()">H3AD-AI &nbsp;↗</a>
+    <a class="whoami" href="https://h3ad-sec.github.io/H3AD" target="_blank" rel="noopener" onclick="closeDrawer()">H3AD
+      &nbsp;↗</a>
+    <a href="https://h3ad-sec.github.io/h3ad-x/" target="_blank" rel="noopener" onclick="closeDrawer()">H3AD-X
+      &nbsp;↗</a>
+    <a href="https://h3ad-sec.github.io/VERDIKT/" target="_blank" rel="noopener" onclick="closeDrawer()"
+      class="drawer-sub">↳ VERDIKT &nbsp;↗</a>
+    <a href="https://YOUR-USERNAME.github.io/h3ad-ai/" target="_blank" rel="noopener" onclick="closeDrawer()">H3AD-AI
+      &nbsp;↗</a>
     <a href="https://YOUR-USERNAME.github.io/h3ad-detect/" target="_blank" rel="noopener"
       onclick="closeDrawer()">H3AD-DETECT &nbsp;↗</a>
     <a href="https://YOUR-USERNAME.github.io/h3ad-hunt/" target="_blank" rel="noopener"
       onclick="closeDrawer()">H3AD-HUNT &nbsp;↗</a>
-    <a href="https://YOUR-USERNAME.github.io/h3ad-ops/" target="_blank" rel="noopener"
-      onclick="closeDrawer()">H3AD-OPS &nbsp;↗</a>
-    <a href="https://YOUR-USERNAME.github.io/h3ad-df/" target="_blank" rel="noopener"
-      onclick="closeDrawer()">H3AD-DF &nbsp;↗</a>
-    <a href="https://YOUR-USERNAME.github.io/h3ad-ir/" target="_blank" rel="noopener"
-      onclick="closeDrawer()">H3AD-IR &nbsp;↗</a>
+    <a href="https://YOUR-USERNAME.github.io/h3ad-ops/" target="_blank" rel="noopener" onclick="closeDrawer()">H3AD-OPS
+      &nbsp;↗</a>
+    <a href="https://YOUR-USERNAME.github.io/h3ad-df/" target="_blank" rel="noopener" onclick="closeDrawer()">H3AD-DF
+      &nbsp;↗</a>
+    <a href="https://YOUR-USERNAME.github.io/h3ad-ir/" target="_blank" rel="noopener" onclick="closeDrawer()">H3AD-IR
+      &nbsp;↗</a>
     <a href="mailto:h3adsec@gmail.com" onclick="closeDrawer()">CONTACT</a>
   </div>
 
@@ -822,7 +960,7 @@
       <!-- HERO -->
       <section class="hero">
         <span class="hero-tag">H3AD-SEC · whoami</span>
-        <h1 class="hero-title"><span>H3AD</span> — Cyber Defense<br>Researcher</h1>
+        <h1 class="hero-title"><span>H3AD</span> — Cyber Defense Researcher</h1>
         <p class="hero-sub">
           Threat Intelligence · Detection Engineering · DFIR · Threat Hunting · SOC Automation
         </p>
