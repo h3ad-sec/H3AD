@@ -8,36 +8,31 @@
   <meta name="description"
     content="H3AD - Cyber defense researcher. Threat intelligence, detection engineering, DFIR, and SOC automation.">
   <link rel="icon" href="https://h3ad-sec.github.io/fevicon.png?v=2026" type="image/png">
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #06080e;
-      --panel: #0b1018;
-      --panel-alt: #101824;
-      --surface: #18253a;
-      --text: #e2eeff;
-      --text-dim: #96b0cc;
-      --muted: #62809c;
-      --muted-dim: #3a5470;
-      --accent: #00ff9f;
-      --accent2: #4d94ff;
-      --border: #1e3050;
-      --border-dim: #121e30;
+      --bg: #080c14; --panel: #0d1117; --panel-alt: #111827;
+      --border: #1c2333; --text: #e6edf3; --muted: #6b7280;
+      --accent: #00d4ff; --primary: #00d4ff;
+      --primary-dim: rgba(0, 212, 255, 0.08);
+      --primary-glow: rgba(0, 212, 255, 0.18);
+      --status-live: #00d4ff; --status-partial: #f59e0b; --status-soon: #2d3748;
       --nav-h: 48px;
+      --surface: #18253a;
+      --text-dim: #96b0cc;
+      --muted-dim: #3a5470;
+      --border-dim: #121e30;
     }
 
     body.light {
-      --bg: #eef2f8;
-      --panel: #ffffff;
-      --panel-alt: #e4ecf6;
+      --bg: #f8fafc; --panel: #ffffff; --panel-alt: #f1f5f9;
+      --border: #e2e8f0; --text: #0d1117; --muted: #5c6b8a;
+      --accent: #0284c7; --primary: #0284c7;
+      --primary-dim: rgba(2, 132, 199, 0.07);
+      --status-live: #0284c7; --status-partial: #d97706;
       --surface: #ccd8ec;
-      --text: #060e1c;
       --text-dim: #142540;
-      --muted: #2c4a6a;
       --muted-dim: #5c7a9a;
-      --accent: #004db8;
-      --accent2: #007a55;
-      --border: #a0b8d4;
       --border-dim: #c8d8ec;
     }
 
@@ -56,7 +51,7 @@
     body {
       background: var(--bg);
       color: var(--text);
-      font-family: 'Share Tech Mono', monospace;
+      font-family: 'Exo 2', sans-serif;
       font-size: 14px;
       line-height: 1.6;
       min-height: 100vh;
@@ -64,25 +59,14 @@
       transition: background 0.3s, color 0.3s;
     }
 
+    body::before { content: ''; position: fixed; inset: 0;
+      background: radial-gradient(ellipse 80% 45% at 50% 0%, rgba(0,212,255,0.055) 0%, transparent 100%), radial-gradient(ellipse 50% 35% at 5% 100%, rgba(88,166,255,0.04) 0%, transparent 100%);
+      pointer-events: none; z-index: 0; }
+    body.light::before { background: radial-gradient(ellipse 80% 45% at 50% 0%, rgba(2,132,199,0.05) 0%, transparent 100%), radial-gradient(ellipse 50% 35% at 5% 100%, rgba(37,99,235,0.03) 0%, transparent 100%); }
+
     a {
       color: inherit;
       text-decoration: none;
-    }
-
-    /* ── MATRIX CANVAS ── */
-    #matrix-canvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-      pointer-events: none;
-      opacity: 0.18;
-    }
-
-    body.light #matrix-canvas {
-      opacity: 0.12;
     }
 
     /* ── NAV ── */
@@ -92,7 +76,7 @@
       left: 0;
       right: 0;
       z-index: 50;
-      background: rgba(8, 12, 18, 0.9);
+      background: rgba(8, 12, 20, 0.92);
       border-bottom: 1px solid var(--border);
       height: var(--nav-h);
       display: flex;
@@ -103,7 +87,7 @@
     }
 
     body.light .nav {
-      background: rgba(242, 245, 250, 0.9);
+      background: rgba(248, 250, 252, 0.92);
     }
 
     .nav-brand {
@@ -131,7 +115,8 @@
     }
 
     .nav-links a {
-      font-family: 'Share Tech Mono';
+      font-family: 'Exo 2', sans-serif;
+      font-weight: 500;
       font-size: 0.68rem;
       color: var(--muted);
       padding: 5px 9px;
@@ -145,11 +130,11 @@
     .nav-links a:hover {
       color: var(--accent);
       border-color: var(--border);
-      background: rgba(0, 255, 159, 0.05);
+      background: var(--primary-dim);
     }
 
     body.light .nav-links a:hover {
-      background: rgba(0, 77, 184, 0.07);
+      background: var(--primary-dim);
     }
 
     .nav-links a.whoami {
@@ -158,7 +143,7 @@
 
     .nav-links a.whoami:hover {
       border-color: var(--accent);
-      background: rgba(0, 255, 159, 0.07);
+      background: var(--primary-dim);
     }
 
     .nav-links a:last-child {
@@ -259,7 +244,7 @@
     .nav-drawer a:hover {
       color: var(--accent);
       border-left-color: var(--accent);
-      background: rgba(0, 255, 159, 0.04);
+      background: var(--primary-dim);
     }
 
     .nav-drawer a.whoami {
@@ -267,7 +252,7 @@
     }
 
     body.light .nav-drawer a:hover {
-      background: rgba(0, 77, 184, 0.06);
+      background: var(--primary-dim);
     }
 
     /* ── PAGE WRAPPER ── */
@@ -290,6 +275,7 @@
     }
 
     .hero-tag {
+      font-family: 'Share Tech Mono', monospace;
       font-size: 0.6rem;
       letter-spacing: 0.28em;
       text-transform: uppercase;
@@ -298,6 +284,8 @@
     }
 
     .hero-title {
+      font-family: 'Exo 2', sans-serif;
+      font-weight: 700;
       font-size: clamp(1.2rem, 3.5vw, 2.4rem);
       color: var(--text);
       letter-spacing: 0.04em;
@@ -314,15 +302,17 @@
 
     .hero-title span {
       color: var(--accent);
-      text-shadow: 0 0 32px rgba(0, 255, 159, 0.4);
+      text-shadow: 0 0 32px rgba(0, 212, 255, 0.4);
     }
 
     body.light .hero-title span {
-      text-shadow: 0 0 24px rgba(0, 77, 184, 0.35);
+      text-shadow: 0 0 24px rgba(2, 132, 199, 0.35);
     }
 
     .hero-sub {
-      font-size: 0.72rem;
+      font-family: 'Exo 2', sans-serif;
+      font-weight: 300;
+      font-size: 0.85rem;
       color: var(--text-dim);
       line-height: 1.9;
       letter-spacing: 0.04em;
@@ -398,6 +388,7 @@
     }
 
     .prompt {
+      font-family: 'Share Tech Mono', monospace;
       color: var(--accent);
       white-space: nowrap;
       font-size: 0.8rem;
@@ -406,11 +397,13 @@
     }
 
     .cmd {
+      font-family: 'Share Tech Mono', monospace;
       color: var(--text);
       font-size: 0.8rem;
     }
 
     .out {
+      font-family: 'Share Tech Mono', monospace;
       width: 100%;
       padding: 0.2rem 0 0.2rem 1.5rem;
       font-size: 0.76rem;
@@ -452,49 +445,42 @@
 
     /* ── SECTION LABEL ── */
     .section-label {
-      font-size: 0.65rem;
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 0.6rem;
       letter-spacing: 0.22em;
-      color: var(--muted);
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 0.65rem;
-      margin: 4rem 0 2rem;
-    }
-
-    /* ── MOTO ── */
-    .moto {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-left: 2px solid var(--accent);
-      border-radius: 0 6px 6px 0;
-      padding: 1.6rem 2rem;
-    }
-
-    .moto-quote {
-      color: var(--text-dim);
-      font-size: 0.82rem;
-      line-height: 1.85;
-      margin-bottom: 1.1rem;
-    }
-
-    .moto-quote em {
+      text-transform: uppercase;
       color: var(--accent);
-      font-style: normal;
+      margin: 3.5rem 0 1.5rem;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+    /* ── MANIFESTO ── */
+    .manifesto-strip {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 2rem 0;
+      margin-bottom: 0.5rem;
+    }
+    .manifesto-text {
+      font-size: clamp(0.82rem, 2vw, 1rem);
+      color: var(--text);
+      line-height: 1.9;
+      letter-spacing: 0.02em;
     }
 
-    .moto-body {
-      color: var(--muted);
-      font-size: 0.78rem;
-      line-height: 1.95;
-    }
-
-    .moto-body strong {
-      color: var(--text-dim);
-    }
+    /* ── HERO STATS ── */
+    .hero-stats { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 1.5rem; }
+    .stat-chip { display: flex; flex-direction: column; padding: 10px 16px; background: var(--panel); border: 1px solid var(--border); border-radius: 4px; min-width: 80px; }
+    .stat-val { font-family: 'Exo 2', sans-serif; font-weight: 700; font-size: 1rem; color: var(--accent); letter-spacing: 0.04em; line-height: 1.2; }
+    .stat-label { font-family: 'Share Tech Mono', monospace; font-size: 0.52rem; letter-spacing: 0.18em; color: var(--muted); margin-top: 4px; }
 
     /* ── BIO ── */
     .bio {
+      font-family: 'Exo 2', sans-serif;
+      font-weight: 300;
       color: var(--muted);
-      font-size: 0.8rem;
+      font-size: 0.92rem;
       line-height: 2;
       max-width: 720px;
       letter-spacing: 0.02em;
@@ -518,38 +504,34 @@
       grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
       gap: 1px;
       border: 1px solid var(--border);
-      border-radius: 8px;
+      border-radius: 6px;
       overflow: hidden;
-      background: var(--surface);
+      background: var(--border);
     }
 
     .card {
       background: var(--panel);
-      padding: 1.5rem 1.6rem;
+      padding: 1.4rem 1.6rem;
       transition: background 0.15s;
       cursor: default;
     }
 
-    .card:hover {
-      background: var(--panel-alt);
-    }
-
-    .card-icon {
-      font-size: 18px;
-      margin-bottom: 0.8rem;
-    }
+    .card:hover { background: var(--panel-alt); }
 
     .card-title {
+      font-family: 'Share Tech Mono', monospace;
       color: var(--accent);
-      font-size: 0.65rem;
-      letter-spacing: 0.12em;
+      font-size: 0.6rem;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.65rem;
     }
 
     .card-desc {
+      font-family: 'Exo 2', sans-serif;
+      font-weight: 400;
       color: var(--muted);
-      font-size: 0.74rem;
+      font-size: 0.7rem;
       line-height: 1.75;
     }
 
@@ -700,12 +682,12 @@
     .c-email {
       color: var(--accent);
       font-size: 0.82rem;
-      border-bottom: 1px solid rgba(0, 255, 159, 0.3);
+      border-bottom: 1px solid rgba(0, 212, 255, 0.3);
       transition: border-color 0.2s;
     }
 
     body.light .c-email {
-      border-bottom-color: rgba(0, 77, 184, 0.3);
+      border-bottom-color: rgba(2, 132, 199, 0.3);
     }
 
     .c-email:hover {
@@ -729,15 +711,15 @@
       text-transform: uppercase;
     }
 
-    .badge.online {
-      background: rgba(0, 255, 159, 0.06);
+    .badge.online, .badge-live {
+      background: rgba(0, 212, 255, 0.1);
       color: var(--accent);
-      border: 1px solid rgba(0, 255, 159, 0.15);
+      border: 1px solid rgba(0, 212, 255, 0.25);
     }
 
-    body.light .badge.online {
-      background: rgba(0, 110, 224, 0.06);
-      border-color: rgba(0, 110, 224, 0.15);
+    body.light .badge.online, body.light .badge-live {
+      background: rgba(2, 132, 199, 0.08);
+      border-color: rgba(2, 132, 199, 0.25);
     }
 
     .dot {
@@ -847,11 +829,11 @@
     .nav-links .nav-dropdown a:hover {
       color: var(--accent);
       border-left-color: var(--accent);
-      background: rgba(0, 255, 159, 0.04);
+      background: var(--primary-dim);
     }
 
     body.light .nav-links .nav-dropdown a:hover {
-      background: rgba(0, 77, 184, 0.06);
+      background: var(--primary-dim);
     }
 
     .drawer-sub {
@@ -890,10 +872,10 @@
     }
     #scroll-sentinel{position:absolute;top:0;left:0;width:1px;height:10px;pointer-events:none;}
     .xv-nav-pill{display:flex;flex-direction:column;align-items:flex-start;gap:1px;margin-left:10px;padding-left:10px;border-left:1px solid var(--border);opacity:0;transform:translateX(-8px);pointer-events:none;transition:opacity .3s ease,transform .3s cubic-bezier(.4,0,.2,1);white-space:nowrap;flex-shrink:0;}
-    .xv-pill-name{font-family:'Share Tech Mono',monospace;font-size:13px;letter-spacing:4px;line-height:1;}
+    .xv-pill-name{font-family:'Exo 2',sans-serif;font-weight:700;font-size:13px;letter-spacing:4px;line-height:1;}
     .xv-pill-accent{color:var(--accent);}
     .xv-pill-text{color:var(--text);}
-    .xv-pill-tagline{font-family:'Share Tech Mono',monospace;font-size:8px;color:var(--muted);letter-spacing:1.5px;}
+    .xv-pill-tagline{font-family:'Exo 2',sans-serif;font-weight:400;font-size:8px;color:var(--muted);letter-spacing:1.5px;}
     body.hero-hidden .xv-nav-pill{opacity:1;transform:translateX(0);pointer-events:auto;}
     body.hero-hidden .hero{transform:translateY(-100%);opacity:0;pointer-events:none;}
     body.hero-hidden .page{padding-top:calc(var(--nav-h) + 20px);}
@@ -908,7 +890,6 @@
 
 <body>
   <div id="scroll-sentinel" aria-hidden="true"></div>
-  <canvas id="matrix-canvas"></canvas>
 
   <!-- NAV -->
   <nav class="nav">
@@ -1028,10 +1009,8 @@
       <!-- HERO -->
       <section class="hero">
         <span class="hero-tag">H3AD-SEC · whoami</span>
-        <h1 class="hero-title"><span>H3AD</span> — Cyber Defense Researcher</h1>
-        <p class="hero-sub">
-          Threat Intelligence · Detection Engineering · DFIR · Threat Hunting · SOC Automation
-        </p>
+        <h1 class="hero-title"><span>Hrushikesh Badgujar</span></h1>
+        <p class="hero-sub">SOC Analyst · Detection Engineer · H3AD-SEC</p>
 
         <!-- TERMINAL -->
         <div class="terminal">
@@ -1049,9 +1028,9 @@
             </div>
             <div class="t-line gap">
               <span class="out">
-                <span class="out-acc">H3AD</span>
-                <span class="out-dim"> — </span>
-                <span class="out-hl">Cyber Defense Researcher &amp; Threat Intelligence Practitioner</span>
+                <span class="out-acc">Hrushikesh Badgujar</span>
+                <span class="out-dim"> / </span>
+                <span class="out-hl">SOC Analyst · Detection Engineer · H3AD-SEC</span>
               </span>
             </div>
 
@@ -1061,8 +1040,7 @@
             </div>
             <div class="t-line gap">
               <span class="out">
-                <span class="out-hl">Operationalizing threat intelligence across the full defensive spectrum from raw
-                  IOC to root cause, from hypothesis to detection rule.</span>
+                <span class="out-hl">Operationalizing threat intelligence across the full defensive spectrum. Raw IOC to root cause, hypothesis to detection rule.</span>
               </span>
             </div>
 
@@ -1087,7 +1065,7 @@
             </div>
             <div class="t-line gap">
               <span class="out">
-                <span class="badge online"><span class="dot"></span>online &amp; researching</span>
+                <span class="badge online"><span class="dot"></span>online &amp; building</span>
               </span>
             </div>
 
@@ -1098,92 +1076,77 @@
 
           </div>
         </div>
+
+        <div class="hero-stats">
+          <div class="stat-chip"><span class="stat-val">7</span><span class="stat-label">MODULES</span></div>
+          <div class="stat-chip"><span class="stat-val">14+</span><span class="stat-label">TOOLS LIVE</span></div>
+          <div class="stat-chip"><span class="stat-val">5</span><span class="stat-label">DOMAINS</span></div>
+          <div class="stat-chip"><span class="stat-val">2026</span><span class="stat-label">ACTIVE BUILD</span></div>
+        </div>
       </section>
 
       <!-- MOTO -->
-      <p class="section-label">// moto</p>
-      <div class="moto">
-        <div class="moto-quote">
-          <em>"Intelligence without action is noise. Detection without context is blind. Response without understanding
-            is guesswork."</em>
-        </div>
-        <div class="moto-body">
-          H3AD-SEC exists to close the gap — turning raw threat data into operational defense,
-          building detection logic that actually fires on what matters,
-          and hunting adversaries before they become incidents.
-          The mission is simple: <strong>know the threat. detect it early. respond with precision.</strong>
-        </div>
+      <div class="manifesto-strip">
+        <p class="manifesto-text">Intelligence without action is noise.<br>Detection without context is blind.<br>Response without understanding is guesswork.<br><span style="font-size:0.65rem;color:var(--muted);letter-spacing:0.06em;">H3AD-SEC closes the gap. Raw threat data to operational defense, hypothesis to detection rule.</span></p>
       </div>
 
       <!-- ABOUT -->
-      <p class="section-label">// about</p>
+      <div class="section-label">ABOUT</div>
       <div class="bio">
         <p>
-          I'm <span class="hl">H3AD</span> — a cyber defense researcher driven by a relentless curiosity about
-          how adversaries think, operate, and persist. I don't just work in security —
-          I <span class="hl">live in the intersection</span> of threat intelligence, detection engineering,
-          and incident response, treating each as inseparable disciplines of the same operational reality.
+          Building detection engineering infrastructure from scratch.
+          SOC analyst by day, platform builder by night.
+          <span class="acc">H3AD-SEC</span> is the portfolio and the product.
         </p>
         <p>
-          My work revolves around <span class="hl">understanding attacker behavior at the TTPs level</span>,
-          translating that understanding into <span class="hl">detection logic that survives real-world noise</span>,
-          and building the tooling and automation that makes a lean SOC punch above its weight.
-          <span class="acc">H3AD-SEC</span> is the platform where all of that research lives, grows, and ships.
+          My work sits at the intersection of <span class="hl">threat intelligence, detection engineering,
+          and incident response</span>, treating them as inseparable disciplines of the same operational reality.
+          I focus on <span class="hl">attacker behavior at the TTP level</span>, translating that understanding
+          into <span class="hl">detection logic that survives real-world noise</span>,
+          and building tooling that makes a lean SOC punch above its weight.
         </p>
         <p>
-          Every project here is <span class="hl">purpose-built</span> — no fluff, no demos-for-demos-sake.
-          If it's in the platform, it solves a real problem in cyber defense operations.
+          Every module in this platform is <span class="hl">purpose-built</span>.
+          No demos for demos' sake. If it's here, it solves a real problem in cyber defense operations.
         </p>
       </div>
 
       <!-- DOMAINS -->
-      <p class="section-label">// domains</p>
+      <div class="section-label">DOMAINS</div>
       <div class="grid">
         <div class="card">
-          <div class="card-icon">⚡</div>
           <div class="card-title">Threat Intel &amp; APT Tracking</div>
-          <div class="card-desc">Tracking adversary infrastructure, TTPs, and campaigns. Correlating IOCs into
-            structured intelligence that feeds every other discipline.</div>
+          <div class="card-desc">Tracking adversary infrastructure, TTPs, and campaigns. Correlating IOCs into structured intelligence that feeds every other discipline.</div>
         </div>
         <div class="card">
-          <div class="card-icon">🔬</div>
           <div class="card-title">Detection Engineering</div>
-          <div class="card-desc">Writing detection logic that reflects attacker behavior — not just indicators. Sigma
-            rules, SIEM tuning, and detection-as-code pipelines.</div>
+          <div class="card-desc">Writing detection logic that reflects attacker behavior, not just indicators. Sigma rules, SIEM tuning, and detection-as-code pipelines.</div>
         </div>
         <div class="card">
-          <div class="card-icon">🧬</div>
           <div class="card-title">DFIR &amp; Malware Analysis</div>
-          <div class="card-desc">From triage to root cause. Artifact collection, memory forensics, and malware behavior
-            analysis to understand exactly what happened.</div>
+          <div class="card-desc">From triage to root cause. Artifact collection, memory forensics, and malware behavior analysis to understand exactly what happened.</div>
         </div>
         <div class="card">
-          <div class="card-icon">🎯</div>
           <div class="card-title">Threat Hunting</div>
-          <div class="card-desc">Hypothesis-driven hunting across endpoint, network, and identity telemetry. Finding
-            what alerts didn't catch — then codifying it.</div>
+          <div class="card-desc">Hypothesis-driven hunting across endpoint, network, and identity telemetry. Finding what alerts didn't catch, then codifying it.</div>
         </div>
         <div class="card">
-          <div class="card-icon">⚙️</div>
           <div class="card-title">SOC &amp; SecOps Automation</div>
-          <div class="card-desc">SOAR playbooks, enrichment pipelines, and triage automation. Removing analyst toil so
-            teams focus on decisions, not data wrangling.</div>
+          <div class="card-desc">Triage queries, enrichment pipelines, and workflow tooling. Removing analyst toil so teams focus on decisions, not data wrangling.</div>
         </div>
         <div class="card">
-          <div class="card-icon">🛰️</div>
           <div class="card-title">Platform Building</div>
-          <div class="card-desc">H3AD-SEC is an operational cyber defense platform in active development. Each module
-            ships real capability, not demos.</div>
+          <div class="card-desc">H3AD-SEC is an operational cyber defense platform in active development. Each module ships real capability, not demos.</div>
         </div>
       </div>
 
       <!-- PRINCIPLES -->
-      <p class="section-label">// operating principles</p>
+      <div class="section-label">OPERATING PRINCIPLES</div>
       <div class="principles">
         <div class="principle">
           <span class="p-num">01</span>
           <span class="p-body"><strong>Context over volume.</strong> A single high-fidelity detection is worth a
-            thousand noisy alerts. Intelligence that isn't actionable isn't intelligence — it's overhead.</span>
+            thousand noisy alerts. Intelligence that isn't actionable isn't intelligence. It's overhead.</span>
         </div>
         <div class="principle">
           <span class="p-num">02</span>
@@ -1203,66 +1166,78 @@
         <div class="principle">
           <span class="p-num">05</span>
           <span class="p-body"><strong>Open. Documented. Operational.</strong> Security tooling that lives in one
-            person's head isn't a capability — it's a dependency. Build things teams can run with.</span>
+            person's head isn't a capability. It's a dependency. Build things teams can run with.</span>
         </div>
       </div>
 
       <!-- PLATFORM MODULES -->
-      <p class="section-label">// platform modules</p>
+      <div class="section-label">PLATFORM</div>
       <div class="modules">
         <a href="https://h3ad-sec.github.io/H3AD-X/" class="module-link">
           <span class="ml-name">H3AD-X</span>
-          <span class="ml-desc">Threat exchange &amp; IOC feeds</span>
+          <span class="ml-desc">IOC enrichment across 11 sources. Deep IP analysis, artifact extraction, DNS infrastructure mapping.</span>
           <span class="ml-arrow">↗</span>
         </a>
         <a href="https://h3ad-sec.github.io/H3AD-AI/" class="module-link">
           <span class="ml-name">H3AD-AI</span>
-          <span class="ml-desc">AI-powered threat analysis</span>
+          <span class="ml-desc">Five AI tools for SOC workflows: runbooks, query generation, FP analysis, ATT&CK mapping, timeline reconstruction.</span>
           <span class="ml-arrow">↗</span>
         </a>
         <a href="https://h3ad-sec.github.io/H3AD-DETECT/" class="module-link">
           <span class="ml-name">H3AD-DETECT</span>
-          <span class="ml-desc">Detection engineering &amp; rules</span>
+          <span class="ml-desc">MITRE-mapped detection query arsenal. KQL, Sigma, XQL, organized by tactic, platform, and data source.</span>
           <span class="ml-arrow">↗</span>
         </a>
         <a href="https://h3ad-sec.github.io/H3AD-HUNT/" class="module-link">
           <span class="ml-name">H3AD-HUNT</span>
-          <span class="ml-desc">Threat hunting playbooks</span>
+          <span class="ml-desc">Hypothesis-driven hunting. Pivot graph for infrastructure analysis, CVE-tied query packs, structured hunt methodology.</span>
           <span class="ml-arrow">↗</span>
         </a>
         <a href="https://h3ad-sec.github.io/H3AD-OPS/" class="module-link">
           <span class="ml-name">H3AD-OPS</span>
-          <span class="ml-desc">SecOps &amp; SOAR automation</span>
+          <span class="ml-desc">Pre-built daily triage queries across auth, network, endpoint, and cloud. Built for shift analysts.</span>
           <span class="ml-arrow">↗</span>
         </a>
         <a href="https://h3ad-sec.github.io/H3AD-DF/" class="module-link">
           <span class="ml-name">H3AD-DF</span>
-          <span class="ml-desc">Digital forensics &amp; artifacts</span>
+          <span class="ml-desc">Forensic analysis, artifact recovery, and memory analysis workflows. In development.</span>
           <span class="ml-arrow">↗</span>
         </a>
         <a href="https://h3ad-sec.github.io/H3AD-IR/" class="module-link">
           <span class="ml-name">H3AD-IR</span>
-          <span class="ml-desc">Incident response &amp; root cause</span>
+          <span class="ml-desc">Structured containment, eradication, and recovery playbooks for active incidents. In development.</span>
           <span class="ml-arrow">↗</span>
         </a>
         <a href="mailto:h3adsec@gmail.com" class="module-link">
           <span class="ml-name">CONTACT</span>
-          <span class="ml-desc">Reach out &amp; collaborate</span>
+          <span class="ml-desc">Collaboration, research exchange, threat intel sharing.</span>
           <span class="ml-arrow">↗</span>
         </a>
       </div>
 
       <!-- CONTACT -->
-      <p class="section-label">// contact</p>
+      <div class="section-label">CONTACT</div>
       <div class="contact-wrap">
         <div class="contact-row">
           <span class="c-prompt">root@h3ad-sec:~$</span>
-          <span class="c-cmd">echo $CONTACT</span>
+          <span class="c-cmd">cat contact.json</span>
         </div>
         <div class="contact-row">
           <span class="c-out">
             <a href="mailto:h3adsec@gmail.com" class="c-email">h3adsec@gmail.com</a>
-            <span class="c-note">&nbsp;— collaboration · research exchange · threat intel sharing</span>
+            <span class="c-note">&nbsp;— collaboration · threat intel sharing · research exchange</span>
+          </span>
+        </div>
+        <div class="contact-row">
+          <span class="c-out">
+            <a href="https://www.linkedin.com/in/hrushikesh-badgujar/" target="_blank" rel="noopener" class="c-email">linkedin.com/in/hrushikesh-badgujar</a>
+            <span class="c-note">&nbsp;— professional network · H3AD-SEC updates</span>
+          </span>
+        </div>
+        <div class="contact-row">
+          <span class="c-out">
+            <a href="https://github.com/h3ad-sec" target="_blank" rel="noopener" class="c-email">github.com/h3ad-sec</a>
+            <span class="c-note">&nbsp;— platform source · tool repos</span>
           </span>
         </div>
       </div>
@@ -1318,65 +1293,6 @@
     /* ── HERO SCROLL HIDE ── */
     (function(){var s=document.getElementById('scroll-sentinel');if(!s)return;new IntersectionObserver(function(e){document.body.classList.toggle('hero-hidden',!e[0].isIntersecting);},{threshold:0}).observe(s);})();
 
-    /* MATRIX */
-    (function () {
-      const canvas = document.getElementById('matrix-canvas');
-      const ctx = canvas.getContext('2d');
-      const chars = [
-        '10.0.', '172.16.', '192.168.', '127.0.0.1', '0.0.0.0', '::1',
-        '443', '80', '8080', '3389', '445', '22', '53',
-        'HTTP', 'HTTPS', 'TLS1.2', 'TLS1.3', 'SMBv1', 'SMBv2', 'DNS', 'DoH',
-        'LDAP', 'Kerberos', 'NTLM', 'RDP',
-        'T1003', 'T1059', 'T1047', 'T1021', 'T1566', 'T1071',
-        'T1218', 'T1547', 'T1486', 'T1082', 'T1055', 'T1105',
-        'IOC', 'IOA', 'YARA', 'SIGMA', 'STIX2', 'TAXII', 'Feed',
-        'Enrichment', 'Attribution', 'Confidence', 'Correlation',
-        'MD5', 'SHA1', 'SHA256', 'Base64', 'XOR', '0x90', 'NOP',
-        'deadbeef', 'c0ffee', 'cafebabe',
-        'LSASS', 'SAM', 'NTDS.dit', 'DPAPI', 'KerberosTGT',
-        'TicketGranting', 'CredentialDump', 'TokenImpersonation',
-        'Shellcode', 'ReflectiveDLL', 'ProcessInject', 'DLLHijack',
-        'Dropper', 'Loader', 'Packed', 'Obfuscated',
-        'C2', 'Beacon', 'Callback', 'Stager', 'Pivot', 'LateralMove',
-        'Persistence', 'PrivilegeEsc', 'Exfil', 'DataStaging',
-        'powershell', 'cmd.exe', 'wmic', 'rundll32',
-        'procdump', 'mimikatz', 'psexec', 'certutil',
-        'netsh', 'whoami', 'tasklist', 'schtasks',
-        'Sysmon', 'ETW', 'EDR', 'XDR', 'SIEM', 'Telemetry',
-        'EventLog', 'AuditTrail',
-        '4624', '4625', '4688', '4672', '4768', '4769',
-        'IAM', 'S3', 'EC2', 'Lambda', 'AzureAD', 'OAuth',
-        'ServicePrincipal', 'AccessKey', 'CloudTrail',
-        'ALERT', 'DETECT', 'BLOCK', 'HUNT', 'RESPOND',
-        'Containment', 'Isolation', 'Remediation',
-        'ZeroDay', 'Exploit', 'RCE', 'LPE', 'Sandbox',
-        'ThreatActor', 'Campaign', 'APT', 'OPSEC'
-      ];
-      let drops = [];
-
-      function initMatrix() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        drops = Array(Math.floor(window.innerWidth / 18)).fill(1);
-      }
-
-      function drawMatrix() {
-        const light = document.body.classList.contains('light');
-        ctx.fillStyle = light ? 'rgba(238,242,248,0.1)' : 'rgba(6,8,14,0.14)';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-        ctx.fillStyle = light ? '#004db8' : '#00ff9f';
-        ctx.font = '12px monospace';
-        for (let i = 0; i < drops.length; i++) {
-          ctx.fillText(chars[Math.floor(Math.random() * chars.length)], i * 18, drops[i] * 18);
-          if (drops[i] * 18 > canvas.height && Math.random() > 0.975) drops[i] = 0;
-          drops[i]++;
-        }
-      }
-
-      window.addEventListener('resize', initMatrix);
-      initMatrix();
-      setInterval(drawMatrix, 45);
-    })();
   </script>
 
 </body>
