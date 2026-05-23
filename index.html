@@ -54,7 +54,7 @@
       font-family: 'Exo 2', sans-serif;
       font-size: 14px;
       line-height: 1.6;
-      min-height: 100vh;
+      min-height: 100dvh;
       overflow-x: hidden;
       transition: background 0.3s, color 0.3s;
     }
@@ -165,6 +165,10 @@
       flex-shrink: 0;
       cursor: pointer;
       padding-left: 1rem;
+      background: none;
+      border: none;
+      display: flex;
+      align-items: center;
     }
 
     .toggle-track {
@@ -202,6 +206,9 @@
       padding: 6px;
       margin-right: 8px;
       flex-shrink: 0;
+      background: none;
+      border: none;
+      border-radius: 4px;
     }
 
     .hamburger span {
@@ -813,7 +820,8 @@
       overflow: hidden;
     }
 
-    .nav-item:hover .nav-dropdown {
+    .nav-item:hover .nav-dropdown,
+    .nav-item:focus-within .nav-dropdown {
       display: block;
     }
 
@@ -1134,6 +1142,48 @@
       [data-reveal],[data-stagger]>* { opacity:1!important;transform:none!important;transition:none!important; }
       .hero-tag,.hero-title span,.terminal-body::after,.terminal-body .t-line,.orb-1,.orb-2 { animation:none!important;opacity:1!important; }
     }
+
+    /* ── FOCUS RINGS (a11y) ── */
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+      border-radius: 3px;
+    }
+    .nav-links a:focus-visible,
+    .nav-drawer a:focus-visible,
+    .module-link:focus-visible,
+    .c-email:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    .toggle-track:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 50px;
+    }
+
+    /* ── MODULE STATUS BADGE ── */
+    .ml-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 0.52rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-top: auto;
+      padding-top: 0.5rem;
+    }
+    .ml-status.live { color: var(--accent); }
+    .ml-status.dev { color: var(--muted); }
+    .ml-status .dot-s {
+      width: 4px; height: 4px; border-radius: 50%;
+      background: currentColor;
+    }
+    .ml-status.live .dot-s { animation: pulse 2.2s ease-in-out infinite; }
+
+    /* ── DROPDOWN KEYBOARD ── */
+    .nav-item[aria-expanded="true"] .nav-dropdown { display: block; }
   </style>
 </head>
 
@@ -1142,9 +1192,9 @@
   <div class="orb orb-2"></div>
   <!-- NAV -->
   <nav class="nav">
-    <div class="hamburger" id="hamburger" onclick="toggleDrawer()" aria-label="Menu">
+    <button class="hamburger" id="hamburger" onclick="toggleDrawer()" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navDrawer">
       <span></span><span></span><span></span>
-    </div>
+    </button>
 
     <div class="nav-brand">
       <a href="https://h3ad-sec.github.io/">
@@ -1202,12 +1252,13 @@
         </div>
       </div>
       <div class="nav-item">
-  <a href="https://h3ad-sec.github.io/H3AD-OPS/" target="_blank" rel="noopener">H3AD-OPS</a>
-  <div class="nav-dropdown"><div class="nav-dropdown-inner">
-    <a href="https://h3ad-sec.github.io/QUICKTRACE/" target="_blank" rel="noopener">QUICKTRACE</a>
-    <a href="https://h3ad-sec.github.io/SHIFTLOG/" target="_blank" rel="noopener">SHIFTLOG</a>
-  </div></div>
-</div>
+        <a href="https://h3ad-sec.github.io/H3AD-OPS/" target="_blank" rel="noopener">H3AD-OPS</a>
+        <div class="nav-dropdown"><div class="nav-dropdown-inner">
+          <a href="https://h3ad-sec.github.io/QUICKTRACE/" target="_blank" rel="noopener">QUICKTRACE</a>
+          <a href="https://h3ad-sec.github.io/SHIFTLOG/" target="_blank" rel="noopener">SHIFTLOG</a>
+          <a href="https://h3ad-sec.github.io/PHISHOPS/" target="_blank" rel="noopener">PHISHOPS</a>
+        </div></div>
+      </div>
       <div class="nav-item">
         <a href="https://h3ad-sec.github.io/H3AD-DF/" target="_blank" rel="noopener">H3AD-DF</a>
         <div class="nav-dropdown"><div class="nav-dropdown-inner">
@@ -1225,11 +1276,11 @@
       <a href="mailto:h3adsec@gmail.com">CONTACT</a>
     </div>
 
-    <div class="theme-toggle" onclick="toggleTheme()">
-      <div class="toggle-track">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark theme" id="themeBtn">
+      <div class="toggle-track" tabindex="-1">
         <div class="toggle-thumb"></div>
       </div>
-    </div>
+    </button>
   </nav>
 
   <!-- MOBILE DRAWER -->
@@ -1266,6 +1317,7 @@
       &nbsp;↗</a>
     <a href="https://h3ad-sec.github.io/QUICKTRACE/" target="_blank" rel="noopener" onclick="closeDrawer()" class="drawer-sub">↳ QUICKTRACE ↗</a>
     <a href="https://h3ad-sec.github.io/SHIFTLOG/" target="_blank" rel="noopener" onclick="closeDrawer()" class="drawer-sub">↳ SHIFTLOG ↗</a>
+    <a href="https://h3ad-sec.github.io/PHISHOPS/" target="_blank" rel="noopener" onclick="closeDrawer()" class="drawer-sub">↳ PHISHOPS ↗</a>
     <a href="https://h3ad-sec.github.io/H3AD-DF/" target="_blank" rel="noopener" onclick="closeDrawer()">H3AD-DF
       &nbsp;↗</a>
     <a href="https://h3ad-sec.github.io/REGSCOPE/" target="_blank" rel="noopener" onclick="closeDrawer()" class="drawer-sub">↳ REGSCOPE ↗</a>
@@ -1354,8 +1406,8 @@
 
         <div class="hero-stats" data-stagger>
           <div class="stat-chip"><span class="stat-val" data-count="7">7</span><span class="stat-label">MODULES</span></div>
-          <div class="stat-chip"><span class="stat-val" data-count="14" data-suffix="+">14+</span><span class="stat-label">TOOLS LIVE</span></div>
-          <div class="stat-chip"><span class="stat-val" data-count="5">5</span><span class="stat-label">DOMAINS</span></div>
+          <div class="stat-chip"><span class="stat-val" data-count="20" data-suffix="+">20+</span><span class="stat-label">TOOLS LIVE</span></div>
+          <div class="stat-chip"><span class="stat-val" data-count="6">6</span><span class="stat-label">DOMAINS</span></div>
           <div class="stat-chip"><span class="stat-val">2026</span><span class="stat-label">ACTIVE BUILD</span></div>
         </div>
       </section>
@@ -1451,37 +1503,37 @@
         <a href="https://h3ad-sec.github.io/H3AD-X/" class="module-link">
           <span class="ml-name">H3AD-X</span>
           <span class="ml-desc">IOC enrichment across 11 sources. Deep IP analysis, artifact extraction, DNS infrastructure mapping.</span>
-          <span class="ml-arrow">↗</span>
+          <span class="ml-status live"><span class="dot-s"></span>Live</span>
         </a>
         <a href="https://h3ad-sec.github.io/H3AD-AI/" class="module-link">
           <span class="ml-name">H3AD-AI</span>
-          <span class="ml-desc">Five AI tools for SOC workflows: runbooks, query generation, FP analysis, ATT&CK mapping, timeline reconstruction.</span>
-          <span class="ml-arrow">↗</span>
+          <span class="ml-desc">Nine AI tools for SOC workflows: runbooks, query generation, FP analysis, ATT&CK mapping, timeline reconstruction.</span>
+          <span class="ml-status live"><span class="dot-s"></span>Live</span>
         </a>
         <a href="https://h3ad-sec.github.io/H3AD-DETECT/" class="module-link">
           <span class="ml-name">H3AD-DETECT</span>
           <span class="ml-desc">MITRE-mapped detection query arsenal. KQL, Sigma, XQL, organized by tactic, platform, and data source.</span>
-          <span class="ml-arrow">↗</span>
+          <span class="ml-status live"><span class="dot-s"></span>Live</span>
         </a>
         <a href="https://h3ad-sec.github.io/H3AD-HUNT/" class="module-link">
           <span class="ml-name">H3AD-HUNT</span>
           <span class="ml-desc">Hypothesis-driven hunting. Pivot graph for infrastructure analysis, CVE-tied query packs, structured hunt methodology.</span>
-          <span class="ml-arrow">↗</span>
+          <span class="ml-status live"><span class="dot-s"></span>Live</span>
         </a>
         <a href="https://h3ad-sec.github.io/H3AD-OPS/" class="module-link">
           <span class="ml-name">H3AD-OPS</span>
-          <span class="ml-desc">Pre-built daily triage queries across auth, network, endpoint, and cloud. Built for shift analysts.</span>
-          <span class="ml-arrow">↗</span>
+          <span class="ml-desc">Pre-built triage queries across auth, network, endpoint, and cloud. Built for shift analysts.</span>
+          <span class="ml-status live"><span class="dot-s"></span>Live</span>
         </a>
         <a href="https://h3ad-sec.github.io/H3AD-DF/" class="module-link">
           <span class="ml-name">H3AD-DF</span>
-          <span class="ml-desc">Forensic analysis, artifact recovery, and memory analysis workflows. In development.</span>
-          <span class="ml-arrow">↗</span>
+          <span class="ml-desc">Forensic analysis, artifact recovery, and memory analysis workflows.</span>
+          <span class="ml-status dev"><span class="dot-s"></span>In development</span>
         </a>
         <a href="https://h3ad-sec.github.io/H3AD-IR/" class="module-link">
           <span class="ml-name">H3AD-IR</span>
-          <span class="ml-desc">Structured containment, eradication, and recovery playbooks for active incidents. In development.</span>
-          <span class="ml-arrow">↗</span>
+          <span class="ml-desc">Structured containment, eradication, and recovery playbooks for active incidents.</span>
+          <span class="ml-status dev"><span class="dot-s"></span>In development</span>
         </a>
         <a href="mailto:h3adsec@gmail.com" class="module-link">
           <span class="ml-name">CONTACT</span>
@@ -1509,6 +1561,12 @@
             <span class="c-note">&nbsp;— professional network · H3AD-SEC updates</span>
           </span>
         </div>
+        <div class="contact-row">
+          <span class="c-out">
+            <a href="https://github.com/h3ad-sec" target="_blank" rel="noopener" class="c-email">github.com/h3ad-sec</a>
+            <span class="c-note">&nbsp;— platform source · open detection engineering</span>
+          </span>
+        </div>
       </div>
 
     </div><!-- /page -->
@@ -1523,16 +1581,31 @@
   <script>
     /* DRAWER */
     function toggleDrawer() {
-      document.getElementById('navDrawer').classList.toggle('open');
+      const drawer = document.getElementById('navDrawer');
+      const ham = document.getElementById('hamburger');
+      const open = drawer.classList.toggle('open');
+      ham.setAttribute('aria-expanded', open);
+      ham.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
     }
     function closeDrawer() {
-      document.getElementById('navDrawer').classList.remove('open');
+      const drawer = document.getElementById('navDrawer');
+      document.getElementById('hamburger').setAttribute('aria-expanded', 'false');
+      document.getElementById('hamburger').setAttribute('aria-label', 'Open navigation menu');
+      drawer.classList.remove('open');
     }
     document.addEventListener('click', e => {
       const drawer = document.getElementById('navDrawer');
       const ham = document.getElementById('hamburger');
       if (drawer.classList.contains('open') && !drawer.contains(e.target) && !ham.contains(e.target)) {
         closeDrawer();
+      }
+    });
+
+    /* KEYBOARD: close dropdowns on Escape */
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        closeDrawer();
+        document.activeElement?.blur();
       }
     });
 
