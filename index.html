@@ -1547,10 +1547,10 @@
       document.body.classList.toggle('light');
       document.body.classList.toggle('dark');
       const t = document.body.classList.contains('light') ? 'light' : 'dark';
-      localStorage.setItem('theme', t);
+      localStorage.setItem('h3ad-theme', t);
       setLogo(t);
     }
-    const saved = localStorage.getItem('theme');
+    const saved = localStorage.getItem('h3ad-theme');
     if (saved === 'light') {
       document.body.classList.add('light');
       setLogo('light');
