@@ -1191,6 +1191,64 @@
 
     /* ── DROPDOWN KEYBOARD ── */
     .nav-item[aria-expanded="true"] .nav-dropdown { display: block; }
+
+    /* ── STACK ── */
+    .stack-grid { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+    .stack-row { display: flex; align-items: flex-start; gap: 1rem; background: var(--panel); padding: 0.85rem 1.4rem; transition: background 0.15s; }
+    .stack-row:hover { background: var(--panel-alt); }
+    .stack-cat { font-family: 'Share Tech Mono', monospace; font-size: 0.56rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); min-width: 120px; flex-shrink: 0; padding-top: 3px; opacity: 0.8; }
+    .stack-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+    .stack-tag { font-family: 'Share Tech Mono', monospace; font-size: 0.6rem; color: var(--text-dim); background: var(--panel-alt); border: 1px solid var(--border); border-radius: 3px; padding: 2px 8px; letter-spacing: 0.03em; }
+    .stack-row:hover .stack-tag { border-color: rgba(0,212,255,.18); }
+    body.light .stack-row:hover .stack-tag { border-color: rgba(2,132,199,.22); }
+
+    /* ── CERTS ── */
+    .certs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+    .cert-card { background: var(--panel); padding: 1rem 1.2rem; display: flex; flex-direction: column; gap: 4px; transition: background 0.15s; }
+    .cert-card:hover { background: var(--panel-alt); }
+    .cert-issuer { font-family: 'Share Tech Mono', monospace; font-size: 0.5rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+    .cert-name { font-family: 'Exo 2', sans-serif; font-weight: 500; font-size: 0.72rem; color: var(--text-dim); line-height: 1.4; margin-top: 2px; }
+    .cert-badge { display: inline-flex; align-items: center; gap: 4px; margin-top: 6px; font-family: 'Share Tech Mono', monospace; font-size: 0.48rem; letter-spacing: 0.12em; text-transform: uppercase; }
+    .cert-badge.earned { color: var(--accent); }
+    .cert-badge.progress { color: var(--status-partial); }
+    .cert-badge .dot-c { width: 4px; height: 4px; border-radius: 50%; background: currentColor; }
+    .cert-badge.earned .dot-c { animation: pulse 2.2s ease-in-out infinite; }
+
+    /* ── WRITING ── */
+    .writing-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+    .writing-item { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding: 1rem 1.4rem; background: var(--panel); transition: background 0.15s; text-decoration: none; }
+    .writing-item:hover { background: var(--panel-alt); }
+    .writing-title { font-family: 'Exo 2', sans-serif; font-size: 0.76rem; color: var(--text-dim); transition: color 0.15s; line-height: 1.4; }
+    .writing-item:hover .writing-title { color: var(--accent); }
+    .writing-pub { font-family: 'Share Tech Mono', monospace; font-size: 0.54rem; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; flex-shrink: 0; }
+    .writing-arrow { color: var(--muted-dim); font-size: 12px; flex-shrink: 0; transition: color 0.15s; }
+    .writing-item:hover .writing-arrow { color: var(--accent); }
+
+    @media (max-width: 640px) {
+      .stack-cat { min-width: 90px; font-size: 0.52rem; }
+      .certs-grid { grid-template-columns: 1fr 1fr; }
+      .writing-pub { display: none; }
+    }
+    @media (max-width: 480px) {
+      .certs-grid { grid-template-columns: 1fr; }
+      .stack-row { flex-direction: column; gap: 0.5rem; }
+    }
+
+    /* ── EXPERIENCE ── */
+    .exp-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+    .exp-item { background: var(--panel); padding: 1.2rem 1.4rem; display: flex; flex-direction: column; gap: 5px; transition: background 0.15s; }
+    .exp-item:hover { background: var(--panel-alt); }
+    .exp-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 2px; }
+    .exp-period { font-family: 'Share Tech Mono', monospace; font-size: 0.58rem; letter-spacing: 0.1em; color: var(--muted); }
+    .exp-current { display: inline-flex; align-items: center; gap: 4px; font-family: 'Share Tech Mono', monospace; font-size: 0.48rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+    .exp-current .dot-e { width: 4px; height: 4px; border-radius: 50%; background: currentColor; animation: pulse 2.2s ease-in-out infinite; }
+    .exp-role { font-family: 'Exo 2', sans-serif; font-weight: 600; font-size: 0.78rem; color: var(--text-dim); }
+    .exp-desc { font-family: 'Exo 2', sans-serif; font-weight: 300; font-size: 0.7rem; color: var(--muted); line-height: 1.75; }
+
+    /* ── NAV CURRENT PAGE ── */
+    .nav-links .nav-current { font-family: 'Exo 2', sans-serif; font-weight: 500; font-size: 0.68rem; color: var(--accent); padding: 5px 9px; border-radius: 4px; border: 1px solid rgba(0,212,255,.35); background: var(--primary-dim); white-space: nowrap; flex-shrink: 0; cursor: default; }
+    body.light .nav-links .nav-current { border-color: rgba(2,132,199,.35); }
+    .nav-drawer .nav-current { font-size: 0.75rem; color: var(--accent); padding: 8px 10px; border-radius: 4px; border-left: 2px solid var(--accent); background: var(--primary-dim); cursor: default; }
   </style>
 </head>
 
@@ -1215,9 +1273,9 @@
 
     <div class="nav-links">
       <div class="nav-divider"></div>
-      <a class="whoami" href="https://h3ad-sec.github.io/H3AD" target="_blank" rel="noopener">H3AD</a>
+      <span class="nav-current">H3AD</span>
       <div class="nav-item">
-        <a href="https://h3ad-sec.github.io/H3AD-X" target="_blank" rel="noopener">H3AD-X</a>
+        <a href="https://h3ad-sec.github.io/H3AD-X">H3AD-X</a>
         <div class="nav-dropdown">
           <div class="nav-dropdown-inner">
             <a href="https://h3ad-sec.github.io/X-VERDIKT/" target="_blank" rel="noopener">X-VERDIKT</a>
@@ -1228,7 +1286,7 @@
         </div>
       </div>
       <div class="nav-item">
-        <a href="https://h3ad-sec.github.io/H3AD-AI/" target="_blank" rel="noopener">H3AD-AI</a>
+        <a href="https://h3ad-sec.github.io/H3AD-AI/">H3AD-AI</a>
         <div class="nav-dropdown">
           <div class="nav-dropdown-inner">
             <a href="https://h3ad-sec.github.io/VERDIKT-AI/" target="_blank" rel="noopener">VERDIKT-AI</a>
@@ -1243,13 +1301,13 @@
         </div>
       </div>
       <div class="nav-item">
-        <a href="https://h3ad-sec.github.io/H3AD-DETECT/" target="_blank" rel="noopener">H3AD-DETECT</a>
+        <a href="https://h3ad-sec.github.io/H3AD-DETECT/">H3AD-DETECT</a>
         <div class="nav-dropdown"><div class="nav-dropdown-inner">
           <a href="https://h3ad-sec.github.io/TRACERULES/" target="_blank" rel="noopener">TRACERULES</a>
         </div></div>
       </div>
       <div class="nav-item">
-        <a href="https://h3ad-sec.github.io/H3AD-HUNT/" target="_blank" rel="noopener">H3AD-HUNT</a>
+        <a href="https://h3ad-sec.github.io/H3AD-HUNT/">H3AD-HUNT</a>
         <div class="nav-dropdown">
           <div class="nav-dropdown-inner">
             <a href="https://h3ad-sec.github.io/HYPOS/" target="_blank" rel="noopener">HYPOS</a>
@@ -1259,7 +1317,7 @@
         </div>
       </div>
       <div class="nav-item">
-        <a href="https://h3ad-sec.github.io/H3AD-OPS/" target="_blank" rel="noopener">H3AD-OPS</a>
+        <a href="https://h3ad-sec.github.io/H3AD-OPS/">H3AD-OPS</a>
         <div class="nav-dropdown"><div class="nav-dropdown-inner">
           <a href="https://h3ad-sec.github.io/QUICKTRACE/" target="_blank" rel="noopener">QUICKTRACE</a>
           <a href="https://h3ad-sec.github.io/SHIFTLOG/" target="_blank" rel="noopener">SHIFTLOG</a>
@@ -1267,19 +1325,19 @@
         </div></div>
       </div>
       <div class="nav-item">
-        <a href="https://h3ad-sec.github.io/H3AD-DF/" target="_blank" rel="noopener">H3AD-DF</a>
+        <a href="https://h3ad-sec.github.io/H3AD-DF/">H3AD-DF</a>
         <div class="nav-dropdown"><div class="nav-dropdown-inner">
           <a href="https://h3ad-sec.github.io/REGSCOPE/" target="_blank" rel="noopener">REGSCOPE</a>
           <a href="https://h3ad-sec.github.io/MALBRIEF-AI/" target="_blank" rel="noopener">MALBRIEF-AI</a>
         </div></div>
       </div>
       <div class="nav-item">
-        <a href="https://h3ad-sec.github.io/H3AD-IR/" target="_blank" rel="noopener">H3AD-IR</a>
+        <a href="https://h3ad-sec.github.io/H3AD-IR/">H3AD-IR</a>
         <div class="nav-dropdown"><div class="nav-dropdown-inner">
           <a href="https://h3ad-sec.github.io/PHISHBOOK/" target="_blank" rel="noopener">PHISHBOOK</a>
         </div></div>
       </div>
-            <a href="https://h3ad-sec.github.io/docs/" target="_blank" rel="noopener">DOCS</a>
+            <a href="https://h3ad-sec.github.io/docs/">DOCS</a>
       <a href="mailto:h3adsec@gmail.com">CONTACT</a>
     </div>
 
@@ -1292,17 +1350,14 @@
 
   <!-- MOBILE DRAWER -->
   <div class="nav-drawer" id="navDrawer">
-    <a class="whoami" href="https://h3ad-sec.github.io/H3AD" target="_blank" rel="noopener" onclick="closeDrawer()">H3AD
-      &nbsp;↗</a>
-    <a href="https://h3ad-sec.github.io/H3AD-X/" target="_blank" rel="noopener" onclick="closeDrawer()">H3AD-X
-      &nbsp;↗</a>
+    <span class="nav-current">H3AD</span>
+    <a href="https://h3ad-sec.github.io/H3AD-X/" onclick="closeDrawer()">H3AD-X</a>
     <a href="https://h3ad-sec.github.io/X-VERDIKT/" target="_blank" rel="noopener" onclick="closeDrawer()"
       class="drawer-sub">↳ X-VERDIKT &nbsp;↗</a>
     <a href="https://h3ad-sec.github.io/PARSE-X/" target="_blank" rel="noopener" onclick="closeDrawer()" class="drawer-sub">↳ PARSE-X ↗</a>
     <a href="https://h3ad-sec.github.io/DNSCOPE/" target="_blank" rel="noopener" onclick="closeDrawer()" class="drawer-sub">↳ DNSCOPE ↗</a>
     <a href="https://h3ad-sec.github.io/MAILSCOPE/" target="_blank" rel="noopener" onclick="closeDrawer()" class="drawer-sub">↳ MAILSCOPE ↗</a>
-    <a href="https://h3ad-sec.github.io/H3AD-AI/" target="_blank" rel="noopener" onclick="closeDrawer()">H3AD-AI
-      &nbsp;↗</a>
+    <a href="https://h3ad-sec.github.io/H3AD-AI/" onclick="closeDrawer()">H3AD-AI</a>
     <a href="https://h3ad-sec.github.io/VERDIKT-AI/" target="_blank" rel="noopener" onclick="closeDrawer()" class="drawer-sub">↳ VERDIKT-AI ↗</a>
     <a href="https://h3ad-sec.github.io/INSIGHT-AI/" target="_blank" rel="noopener" onclick="closeDrawer()" class="drawer-sub">↳ INSIGHT-AI &nbsp;↗</a>
     <a href="https://h3ad-sec.github.io/QUERYCRAFT-AI/" target="_blank" rel="noopener" onclick="closeDrawer()" class="drawer-sub">↳ QUERYCRAFT-AI &nbsp;↗</a>
@@ -1311,26 +1366,21 @@
     <a href="https://h3ad-sec.github.io/CHRONO-AI/" target="_blank" rel="noopener" onclick="closeDrawer()" class="drawer-sub">↳ CHRONO-AI &nbsp;↗</a>
     <a href="https://h3ad-sec.github.io/MALBRIEF-AI/" target="_blank" rel="noopener" onclick="closeDrawer()" class="drawer-sub">↳ MALBRIEF-AI ↗</a>
     <a href="https://h3ad-sec.github.io/PROMPTVAULT/" target="_blank" rel="noopener" onclick="closeDrawer()" class="drawer-sub">↳ PROMPTVAULT ↗</a>
-    <a href="https://h3ad-sec.github.io/H3AD-DETECT/" target="_blank" rel="noopener" onclick="closeDrawer()">H3AD-DETECT
-      &nbsp;↗</a>
+    <a href="https://h3ad-sec.github.io/H3AD-DETECT/" onclick="closeDrawer()">H3AD-DETECT</a>
     <a href="https://h3ad-sec.github.io/TRACERULES/" target="_blank" rel="noopener" onclick="closeDrawer()" class="drawer-sub">↳ TRACERULES ↗</a>
-    <a href="https://h3ad-sec.github.io/H3AD-HUNT/" target="_blank" rel="noopener" onclick="closeDrawer()">H3AD-HUNT
-      &nbsp;↗</a>
+    <a href="https://h3ad-sec.github.io/H3AD-HUNT/" onclick="closeDrawer()">H3AD-HUNT</a>
     <a href="https://h3ad-sec.github.io/HYPOS/" target="_blank" rel="noopener" onclick="closeDrawer()"
       class="drawer-sub">↳ HYPOS &nbsp;↗</a>
     <a href="https://h3ad-sec.github.io/PIVEX/" target="_blank" rel="noopener" onclick="closeDrawer()" class="drawer-sub">↳ PIVEX ↗</a>
     <a href="https://h3ad-sec.github.io/TRACEPULSE/" target="_blank" rel="noopener" onclick="closeDrawer()" class="drawer-sub">↳ TRACEPULSE ↗</a>
-    <a href="https://h3ad-sec.github.io/H3AD-OPS/" target="_blank" rel="noopener" onclick="closeDrawer()">H3AD-OPS
-      &nbsp;↗</a>
+    <a href="https://h3ad-sec.github.io/H3AD-OPS/" onclick="closeDrawer()">H3AD-OPS</a>
     <a href="https://h3ad-sec.github.io/QUICKTRACE/" target="_blank" rel="noopener" onclick="closeDrawer()" class="drawer-sub">↳ QUICKTRACE ↗</a>
     <a href="https://h3ad-sec.github.io/SHIFTLOG/" target="_blank" rel="noopener" onclick="closeDrawer()" class="drawer-sub">↳ SHIFTLOG ↗</a>
     <a href="https://h3ad-sec.github.io/PHISHOPS/" target="_blank" rel="noopener" onclick="closeDrawer()" class="drawer-sub">↳ PHISHOPS ↗</a>
-    <a href="https://h3ad-sec.github.io/H3AD-DF/" target="_blank" rel="noopener" onclick="closeDrawer()">H3AD-DF
-      &nbsp;↗</a>
+    <a href="https://h3ad-sec.github.io/H3AD-DF/" onclick="closeDrawer()">H3AD-DF</a>
     <a href="https://h3ad-sec.github.io/REGSCOPE/" target="_blank" rel="noopener" onclick="closeDrawer()" class="drawer-sub">↳ REGSCOPE ↗</a>
     <a href="https://h3ad-sec.github.io/MALBRIEF-AI/" target="_blank" rel="noopener" onclick="closeDrawer()" class="drawer-sub">↳ MALBRIEF-AI ↗</a>
-    <a href="https://h3ad-sec.github.io/H3AD-IR/" target="_blank" rel="noopener" onclick="closeDrawer()">H3AD-IR
-      &nbsp;↗</a>
+    <a href="https://h3ad-sec.github.io/H3AD-IR/" onclick="closeDrawer()">H3AD-IR</a>
     <a href="https://h3ad-sec.github.io/PHISHBOOK/" target="_blank" rel="noopener" onclick="closeDrawer()" class="drawer-sub">↳ PHISHBOOK ↗</a>
         <a href="https://h3ad-sec.github.io/docs/" target="_blank" rel="noopener" onclick="closeDrawer()">DOCS ↗</a>
     <a href="mailto:h3adsec@gmail.com" onclick="closeDrawer()">CONTACT</a>
@@ -1413,7 +1463,7 @@
 
         <div class="hero-stats" data-stagger>
           <div class="stat-chip"><span class="stat-val" data-count="7">7</span><span class="stat-label">MODULES</span></div>
-          <div class="stat-chip"><span class="stat-val" data-count="20" data-suffix="+">20+</span><span class="stat-label">TOOLS LIVE</span></div>
+          <div class="stat-chip"><span class="stat-val" data-count="25" data-suffix="+">25+</span><span class="stat-label">TOOLS LIVE</span></div>
           <div class="stat-chip"><span class="stat-val" data-count="6">6</span><span class="stat-label">DOMAINS</span></div>
           <div class="stat-chip"><span class="stat-val">2026</span><span class="stat-label">ACTIVE BUILD</span></div>
         </div>
@@ -1428,9 +1478,8 @@
       <div class="section-label" data-reveal>ABOUT</div>
       <div class="bio" data-reveal>
         <p>
-          Building detection engineering infrastructure from scratch.
-          SOC analyst by day, platform builder by night.
-          <span class="acc">H3AD-SEC</span> is the portfolio and the product.
+          M.Tech in Cybersecurity from NFSU. 2.5+ years in MDR/XDR SOC operations, treating detection engineering, threat intelligence, and incident response not as separate tracks but as the same job.
+          <span class="acc">H3AD-SEC</span> is where that work compounds.
         </p>
         <p>
           My work sits at the intersection of <span class="hl">threat intelligence, detection engineering,
@@ -1443,6 +1492,26 @@
           Every module in this platform is <span class="hl">purpose-built</span>.
           No demos for demos' sake. If it's here, it solves a real problem in cyber defense operations.
         </p>
+      </div>
+
+      <!-- EXPERIENCE -->
+      <div class="section-label" data-reveal>EXPERIENCE</div>
+      <div class="exp-list" data-reveal>
+        <div class="exp-item">
+          <div class="exp-meta">
+            <span class="exp-period">May 2024 — Present</span>
+            <span class="exp-current"><span class="dot-e"></span>Current</span>
+          </div>
+          <span class="exp-role">Associate Specialist - Security Operations</span>
+          <span class="exp-desc">MDR and in-house SOC environment. XDR alert triage, CTI-driven threat hunting, and detection engineering. False positive reduction, detection rule tuning, and SOC automation. IAM operations support.</span>
+        </div>
+        <div class="exp-item">
+          <div class="exp-meta">
+            <span class="exp-period">Oct 2023 — Apr 2024</span>
+          </div>
+          <span class="exp-role">Cyber Security Intern · MDR Operations</span>
+          <span class="exp-desc">MDR environment. 24x7 SIEM/EDR/CASM/WAF monitoring. Alert investigation, incident triage, and SOC process improvement.</span>
+        </div>
       </div>
 
       <!-- DOMAINS -->
@@ -1472,6 +1541,131 @@
           <div class="card-title">Platform Building</div>
           <div class="card-desc">H3AD-SEC is an operational cyber defense platform in active development. Each module ships real capability, not demos.</div>
         </div>
+      </div>
+
+      <!-- STACK -->
+      <div class="section-label" data-reveal>STACK</div>
+      <div class="stack-grid" data-reveal>
+        <div class="stack-row">
+          <span class="stack-cat">EDR / XDR</span>
+          <div class="stack-tags">
+            <span class="stack-tag">Cortex XDR</span>
+            <span class="stack-tag">XSIAM</span>
+            <span class="stack-tag">CrowdStrike Falcon</span>
+          </div>
+        </div>
+        <div class="stack-row">
+          <span class="stack-cat">CTI</span>
+          <div class="stack-tags">
+            <span class="stack-tag">Recorded Future</span>
+            <span class="stack-tag">OpenCTI</span>
+          </div>
+        </div>
+        <div class="stack-row">
+          <span class="stack-cat">Email / DLP</span>
+          <div class="stack-tags">
+            <span class="stack-tag">Proofpoint</span>
+            <span class="stack-tag">Clearswift DLP</span>
+          </div>
+        </div>
+        <div class="stack-row">
+          <span class="stack-cat">IAM</span>
+          <div class="stack-tags">
+            <span class="stack-tag">Okta</span>
+          </div>
+        </div>
+        <div class="stack-row">
+          <span class="stack-cat">Forensics</span>
+          <div class="stack-tags">
+            <span class="stack-tag">Volatility</span>
+            <span class="stack-tag">Sysinternals</span>
+            <span class="stack-tag">Wireshark</span>
+            <span class="stack-tag">Nmap</span>
+            <span class="stack-tag">Snort</span>
+          </div>
+        </div>
+        <div class="stack-row">
+          <span class="stack-cat">Query / Detection</span>
+          <div class="stack-tags">
+            <span class="stack-tag">Cortex XQL</span>
+            <span class="stack-tag">CrowdStrike QL</span>
+            <span class="stack-tag">Sigma</span>
+          </div>
+        </div>
+        <div class="stack-row">
+          <span class="stack-cat">Scripting</span>
+          <div class="stack-tags">
+            <span class="stack-tag">PowerShell</span>
+            <span class="stack-tag">Python</span>
+            <span class="stack-tag">Power Automate</span>
+          </div>
+        </div>
+        <div class="stack-row">
+          <span class="stack-cat">Frameworks</span>
+          <div class="stack-tags">
+            <span class="stack-tag">MITRE ATT&amp;CK</span>
+            <span class="stack-tag">Diamond Model</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CERTIFICATIONS -->
+      <div class="section-label" data-reveal>CERTIFICATIONS</div>
+      <div class="certs-grid" data-stagger>
+        <div class="cert-card">
+          <span class="cert-issuer">EC-Council</span>
+          <span class="cert-name">Certified Threat Intelligence Analyst</span>
+          <span class="cert-badge earned"><span class="dot-c"></span>Earned</span>
+        </div>
+        <div class="cert-card">
+          <span class="cert-issuer">EC-Council</span>
+          <span class="cert-name">Certified Ethical Hacker</span>
+          <span class="cert-badge earned"><span class="dot-c"></span>Earned</span>
+        </div>
+        <div class="cert-card">
+          <span class="cert-issuer">Palo Alto Networks</span>
+          <span class="cert-name">Certified Detection &amp; Remediation Analyst</span>
+          <span class="cert-badge earned"><span class="dot-c"></span>Earned</span>
+        </div>
+        <div class="cert-card">
+          <span class="cert-issuer">CrowdStrike</span>
+          <span class="cert-name">CrowdStrike QL Fundamentals I &amp; II</span>
+          <span class="cert-badge earned"><span class="dot-c"></span>Earned</span>
+        </div>
+        <div class="cert-card">
+          <span class="cert-issuer">Recorded Future</span>
+          <span class="cert-name">Intelligence Fundamentals</span>
+          <span class="cert-badge earned"><span class="dot-c"></span>Earned</span>
+        </div>
+        <div class="cert-card">
+          <span class="cert-name">Certified Forensic &amp; Dark Web Analyst</span>
+          <span class="cert-badge earned"><span class="dot-c"></span>Earned</span>
+        </div>
+        <div class="cert-card">
+          <span class="cert-issuer">EC-Council</span>
+          <span class="cert-name">Certified Incident Handler (ECIH)</span>
+          <span class="cert-badge progress"><span class="dot-c"></span>In Progress</span>
+        </div>
+      </div>
+
+      <!-- WRITING -->
+      <div class="section-label" data-reveal>WRITING</div>
+      <div class="writing-list" data-reveal>
+        <a href="https://medium.com/@hrushikeshbadgujar/what-is-ids-intrusion-detection-system-how-it-works-732d81a13fb5" target="_blank" rel="noopener" class="writing-item">
+          <span class="writing-title">What is IDS (Intrusion Detection System) &amp; How it Works</span>
+          <span class="writing-pub">Medium</span>
+          <span class="writing-arrow">↗</span>
+        </a>
+        <a href="https://medium.com/@hrushikeshbadgujar/demystifying-firewalls-exploring-types-rule-parameters-and-real-world-examples-548602ac9958" target="_blank" rel="noopener" class="writing-item">
+          <span class="writing-title">Demystifying Firewalls: Types, Rule Parameters &amp; Real-World Examples</span>
+          <span class="writing-pub">Medium</span>
+          <span class="writing-arrow">↗</span>
+        </a>
+        <a href="https://medium.com/@hrushikeshbadgujar/ips-unraveled-decoding-cyber-protection-58648581edbe" target="_blank" rel="noopener" class="writing-item">
+          <span class="writing-title">IPS Unraveled: Decoding Cyber Protection</span>
+          <span class="writing-pub">Medium</span>
+          <span class="writing-arrow">↗</span>
+        </a>
       </div>
 
       <!-- PRINCIPLES -->
@@ -1542,6 +1736,11 @@
           <span class="ml-desc">Structured containment, eradication, and recovery playbooks for active incidents.</span>
           <span class="ml-status live"><span class="dot-s"></span>Live</span>
         </a>
+        <a href="https://h3ad-sec.github.io/H3AD-LEARN/" class="module-link">
+          <span class="ml-name">H3AD-LEARN</span>
+          <span class="ml-desc">Modular security learning hub. Threat hunting and LOLBAS methodology, chapter by chapter.</span>
+          <span class="ml-status live"><span class="dot-s"></span>Live</span>
+        </a>
         <a href="mailto:h3adsec@gmail.com" class="module-link">
           <span class="ml-name">CONTACT</span>
           <span class="ml-desc">Collaboration, research exchange, threat intel sharing.</span>
@@ -1572,6 +1771,18 @@
           <span class="c-out">
             <a href="https://github.com/h3ad-sec" target="_blank" rel="noopener" class="c-email">github.com/h3ad-sec</a>
             <span class="c-note">&nbsp;— platform source · open detection engineering</span>
+          </span>
+        </div>
+        <div class="contact-row">
+          <span class="c-out">
+            <a href="https://medium.com/@hrushikeshbadgujar" target="_blank" rel="noopener" class="c-email">medium.com/@hrushikeshbadgujar</a>
+            <span class="c-note">&nbsp;— security writeups · IDS · Firewalls · IPS</span>
+          </span>
+        </div>
+        <div class="contact-row">
+          <span class="c-out">
+            <a href="https://www.linkedin.com/company/h3ad-sec/" target="_blank" rel="noopener" class="c-email">linkedin.com/company/h3ad-sec</a>
+            <span class="c-note">&nbsp;— H3AD-SEC platform · follow for updates</span>
           </span>
         </div>
       </div>
