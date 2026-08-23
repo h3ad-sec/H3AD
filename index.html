@@ -8,11 +8,11 @@
   <meta name="description"
     content="H3AD - Cyber defense researcher. Threat intelligence, detection engineering, DFIR, and SOC automation.">
   <link rel="icon" href="https://h3ad-sec.github.io/fevicon.png?v=2026" type="image/png">
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Exo+2:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #080c14; --panel: #0d1117; --panel-alt: #111827;
-      --border: #1c2333; --text: #e6edf3; --muted: #6b7280;
+      --border: #1c2333; --text: #e6edf3; --muted: #8b949e;
       --accent: #00d4ff; --primary: #00d4ff;
       --primary-dim: rgba(0, 212, 255, 0.08);
       --primary-glow: rgba(0, 212, 255, 0.18);
@@ -22,18 +22,22 @@
       --text-dim: #96b0cc;
       --muted-dim: #3a5470;
       --border-dim: #121e30;
+      --mono: 'Share Tech Mono', monospace;
+      --sans: 'Exo 2', sans-serif;
+      --ui:   'IBM Plex Sans', sans-serif;
     }
 
+    /* softened, low-glare light theme, panels dropped off pure white for long work sessions */
     body.light {
-      --bg: #f8fafc; --panel: #ffffff; --panel-alt: #f1f5f9;
-      --border: #e2e8f0; --text: #0d1117; --muted: #5c6b8a;
-      --accent: #0284c7; --primary: #0284c7;
-      --primary-dim: rgba(2, 132, 199, 0.07);
-      --status-live: #0284c7; --status-partial: #d97706;
-      --surface: #ccd8ec;
-      --text-dim: #142540;
-      --muted-dim: #5c7a9a;
-      --border-dim: #c8d8ec;
+      --bg: #D3D7DC; --panel: #DADDE1; --panel-alt: #C9CDD2;
+      --border: #BBC0C6; --text: #000000; --muted: #2E343B;
+      --accent: #0A6EA8; --primary: #0A6EA8;
+      --primary-dim: rgba(10, 110, 168, 0.07);
+      --status-live: #0A6EA8; --status-partial: #B45309;
+      --surface: #C9CDD2;
+      --text-dim: #000000;
+      --muted-dim: #4a5560;
+      --border-dim: #BBC0C6;
     }
 
     *,
@@ -51,7 +55,7 @@
     body {
       background: var(--bg);
       color: var(--text);
-      font-family: 'Exo 2', sans-serif;
+      font-family: var(--ui);
       font-size: 14px;
       line-height: 1.6;
       min-height: 100dvh;
@@ -318,7 +322,7 @@
     }
 
     .hero-sub {
-      font-family: 'Exo 2', sans-serif;
+      font-family: var(--ui);
       font-weight: 300;
       font-size: 0.74rem;
       color: var(--text-dim);
@@ -487,7 +491,7 @@
 
     /* ── BIO ── */
     .bio {
-      font-family: 'Exo 2', sans-serif;
+      font-family: var(--ui);
       font-weight: 300;
       color: var(--muted);
       font-size: 0.92rem;
@@ -538,7 +542,7 @@
     }
 
     .card-desc {
-      font-family: 'Exo 2', sans-serif;
+      font-family: var(--ui);
       font-weight: 400;
       color: var(--muted);
       font-size: 0.7rem;
@@ -1243,7 +1247,7 @@
     .exp-current { display: inline-flex; align-items: center; gap: 4px; font-family: 'Share Tech Mono', monospace; font-size: 0.48rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
     .exp-current .dot-e { width: 4px; height: 4px; border-radius: 50%; background: currentColor; animation: pulse 2.2s ease-in-out infinite; }
     .exp-role { font-family: 'Exo 2', sans-serif; font-weight: 600; font-size: 0.78rem; color: var(--text-dim); }
-    .exp-desc { font-family: 'Exo 2', sans-serif; font-weight: 300; font-size: 0.7rem; color: var(--muted); line-height: 1.75; }
+    .exp-desc { font-family: var(--ui); font-weight: 300; font-size: 0.7rem; color: var(--muted); line-height: 1.75; }
 
     /* ── NAV CURRENT PAGE ── */
     .nav-links .nav-current { font-family: 'Exo 2', sans-serif; font-weight: 500; font-size: 0.68rem; color: var(--accent); padding: 5px 9px; border-radius: 4px; border: 1px solid rgba(0,212,255,.35); background: var(--primary-dim); white-space: nowrap; flex-shrink: 0; cursor: default; }
@@ -1319,6 +1323,7 @@
       </div>
       <a href="https://h3ad-sec.github.io/H3AD-DF/">H3AD-DF</a>
       <a href="https://h3ad-sec.github.io/H3AD-IR/">H3AD-IR</a>
+      <a href="https://h3ad-sec.github.io/H3AD-LEARN/">H3AD-LEARN</a>
       <a href="mailto:h3adsec@gmail.com">CONTACT</a>
     </div>
 
@@ -1354,6 +1359,7 @@
     <a href="https://h3ad-sec.github.io/QUICKTRACE/" target="_blank" rel="noopener" onclick="closeDrawer()" class="drawer-sub">↳ QUICKTRACE ↗</a>
     <a href="https://h3ad-sec.github.io/H3AD-DF/" onclick="closeDrawer()">H3AD-DF</a>
     <a href="https://h3ad-sec.github.io/H3AD-IR/" onclick="closeDrawer()">H3AD-IR</a>
+    <a href="https://h3ad-sec.github.io/H3AD-LEARN/" onclick="closeDrawer()">H3AD-LEARN</a>
     <a href="mailto:h3adsec@gmail.com" onclick="closeDrawer()">CONTACT</a>
   </div>
 
