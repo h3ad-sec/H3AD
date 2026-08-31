@@ -9,31 +9,37 @@
   <meta http-equiv="Expires" content="0">
   <title>H3AD/whoami</title>
   <meta name="description"
-    content="H3AD - Cyber defense researcher. Threat intelligence, detection engineering, DFIR, and SOC automation.">
+    content="H3AD - Cyber defense researcher. Security operations, threat intelligence, threat hunting, incident response, automation, detection engineering, and AI security.">
   <link rel="canonical" href="https://h3ad-sec.github.io/H3AD/" />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="H3AD-SEC" />
   <meta property="og:url" content="https://h3ad-sec.github.io/H3AD/" />
   <meta property="og:title" content="H3AD/whoami" />
-  <meta property="og:description" content="H3AD - Cyber defense researcher. Threat intelligence, detection engineering, DFIR, and SOC automation." />
-  <meta property="og:image" content="https://raw.githubusercontent.com/h3ad-sec/h3ad-sec.github.io/main/logo-dark.png" />
+  <meta property="og:description"
+    content="H3AD - Cyber defense researcher. Security operations, threat intelligence, threat hunting, incident response, automation, detection engineering, and AI security." />
+  <meta property="og:image"
+    content="https://raw.githubusercontent.com/h3ad-sec/h3ad-sec.github.io/main/logo-dark.png" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="H3AD/whoami" />
-  <meta name="twitter:description" content="H3AD - Cyber defense researcher. Threat intelligence, detection engineering, DFIR, and SOC automation." />
-  <meta name="twitter:image" content="https://raw.githubusercontent.com/h3ad-sec/h3ad-sec.github.io/main/logo-dark.png" />
+  <meta name="twitter:description"
+    content="H3AD - Cyber defense researcher. Security operations, threat intelligence, threat hunting, incident response, automation, detection engineering, and AI security." />
+  <meta name="twitter:image"
+    content="https://raw.githubusercontent.com/h3ad-sec/h3ad-sec.github.io/main/logo-dark.png" />
 
   <meta name="theme-color" content="#080c14" />
   <link rel="icon" href="https://h3ad-sec.github.io/fevicon.png?v=20260828" type="image/png">
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Exo+2:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Exo+2:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "name": "H3AD/whoami",
-    "description": "H3AD - Cyber defense researcher. Threat intelligence, detection engineering, DFIR, and SOC automation.",
+    "description": "H3AD - Cyber defense researcher. Security operations, threat intelligence, threat hunting, incident response, automation, detection engineering, and AI security.",
     "url": "https://h3ad-sec.github.io/H3AD/",
     "isPartOf": {
       "@type": "WebSite",
@@ -44,12 +50,19 @@
   </script>
   <style>
     :root {
-      --bg: #080c14; --panel: #0d1117; --panel-alt: #111827;
-      --border: #1c2333; --text: #e6edf3; --muted: #8b949e;
-      --accent: #00d4ff; --primary: #00d4ff;
+      --bg: #080c14;
+      --panel: #0d1117;
+      --panel-alt: #111827;
+      --border: #1c2333;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --accent: #00d4ff;
+      --primary: #00d4ff;
       --primary-dim: rgba(0, 212, 255, 0.08);
       --primary-glow: rgba(0, 212, 255, 0.18);
-      --status-live: #00d4ff; --status-partial: #f59e0b; --status-soon: #2d3748;
+      --status-live: #00d4ff;
+      --status-partial: #f59e0b;
+      --status-soon: #2d3748;
       --nav-h: 48px;
       --surface: #18253a;
       --text-dim: #96b0cc;
@@ -57,21 +70,27 @@
       --border-dim: #121e30;
       --mono: 'Share Tech Mono', monospace;
       --sans: 'Exo 2', sans-serif;
-      --ui:   'IBM Plex Sans', sans-serif;
+      --ui: 'IBM Plex Sans', sans-serif;
       --fs-xs: 11px;
     }
 
-    /* softened, low-glare light theme, panels dropped off pure white for long work sessions */
+    /* clean, high-contrast light theme: white panels on a soft off-white ground */
     body.light {
-      --bg: #D3D7DC; --panel: #DADDE1; --panel-alt: #C9CDD2;
-      --border: #BBC0C6; --text: #000000; --muted: #2E343B;
-      --accent: #0A6EA8; --primary: #0A6EA8;
-      --primary-dim: rgba(10, 110, 168, 0.07);
-      --status-live: #0A6EA8; --status-partial: #B45309;
-      --surface: #C9CDD2;
-      --text-dim: #000000;
-      --muted-dim: #4a5560;
-      --border-dim: #BBC0C6;
+      --bg: #EEF1F4;
+      --panel: #FFFFFF;
+      --panel-alt: #F4F7F9;
+      --border: #DCE3E9;
+      --text: #101823;
+      --muted: #5B6B7A;
+      --accent: #0284C7;
+      --primary: #0284C7;
+      --primary-dim: rgba(2, 132, 199, 0.08);
+      --status-live: #0284C7;
+      --status-partial: #B45309;
+      --surface: #F4F7F9;
+      --text-dim: #1E2733;
+      --muted-dim: #8494A3;
+      --border-dim: #E6EBEF;
     }
 
     *,
@@ -97,10 +116,18 @@
       transition: background 0.3s, color 0.3s;
     }
 
-    body::before { content: ''; position: fixed; inset: 0;
-      background: radial-gradient(ellipse 80% 45% at 50% 0%, rgba(0,212,255,0.055) 0%, transparent 100%), radial-gradient(ellipse 50% 35% at 5% 100%, rgba(88,166,255,0.04) 0%, transparent 100%);
-      pointer-events: none; z-index: 0; }
-    body.light::before { background: radial-gradient(ellipse 80% 45% at 50% 0%, rgba(2,132,199,0.05) 0%, transparent 100%), radial-gradient(ellipse 50% 35% at 5% 100%, rgba(37,99,235,0.03) 0%, transparent 100%); }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 45% at 50% 0%, rgba(0, 212, 255, 0.055) 0%, transparent 100%), radial-gradient(ellipse 50% 35% at 5% 100%, rgba(88, 166, 255, 0.04) 0%, transparent 100%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    body.light::before {
+      background: radial-gradient(ellipse 80% 45% at 50% 0%, rgba(2, 132, 199, 0.05) 0%, transparent 100%), radial-gradient(ellipse 50% 35% at 5% 100%, rgba(37, 99, 235, 0.03) 0%, transparent 100%);
+    }
 
     a {
       color: inherit;
@@ -264,11 +291,13 @@
       position: fixed;
       top: var(--nav-h);
       left: 0;
-      right: 0;
+      width: min(300px, 86vw);
       background: var(--panel);
+      border-right: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
+      box-shadow: 6px 0 28px rgba(0, 0, 0, 0.35);
       z-index: 49;
-      padding: 0.75rem 1.25rem 1rem;
+      padding: 0.75rem 1rem 1rem;
       flex-direction: column;
       gap: 2px;
       max-height: calc(100vh - var(--nav-h));
@@ -306,222 +335,201 @@
     .page {
       position: relative;
       z-index: 1;
-      max-width: 880px;
+      max-width: 1120px;
       margin: 0 auto;
       padding: calc(var(--nav-h) + 2.5rem) 2rem 7rem;
     }
 
-    /* ── HERO ── */
+    /* ── HERO (matches h3ad-sec.github.io hub) ── */
     .hero {
-      padding: 3.5rem 0 2.5rem;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 1.1rem;
+      text-align: center;
+      padding: 3rem 0 1rem;
     }
 
-    .hero-tag {
+    .hero-eyebrow {
       font-family: 'Share Tech Mono', monospace;
-      font-size: 0.6rem;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
+      font-size: 0.65rem;
       color: var(--accent);
-      opacity: 0.75;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 1.9;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+    }
+
+    .hero-eyebrow::before,
+    .hero-eyebrow::after {
+      content: '';
+      width: clamp(40px, 6vw, 90px);
+      height: 1px;
+    }
+
+    .hero-eyebrow::before {
+      background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.55));
+    }
+
+    .hero-eyebrow::after {
+      background: linear-gradient(90deg, rgba(0, 212, 255, 0.55), transparent);
+    }
+
+    body.light .hero-eyebrow::before {
+      background: linear-gradient(90deg, transparent, rgba(2, 132, 199, 0.5));
+    }
+
+    body.light .hero-eyebrow::after {
+      background: linear-gradient(90deg, rgba(2, 132, 199, 0.5), transparent);
+    }
+
+    @media (max-width: 760px) {
+      .hero-eyebrow {
+        display: block;
+        text-align: center;
+      }
+
+      .hero-eyebrow::before,
+      .hero-eyebrow::after {
+        display: none;
+      }
     }
 
     .hero-title {
       font-family: 'Exo 2', sans-serif;
       font-weight: 700;
-      font-size: clamp(1.2rem, 3.5vw, 2.4rem);
+      font-size: clamp(2.25rem, 5.5vw, 3.5rem);
       color: var(--text);
-      letter-spacing: 0.04em;
-      line-height: 1.35;
-      white-space: nowrap;
-    }
-
-    @media (max-width: 600px) {
-      .hero-title {
-        white-space: normal;
-        font-size: clamp(1.3rem, 6vw, 1.8rem);
-      }
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+      margin-bottom: 1.25rem;
     }
 
     .hero-title span {
       color: var(--accent);
-      text-shadow: 0 0 32px rgba(0, 212, 255, 0.4);
-    }
-
-    body.light .hero-title span {
-      text-shadow: 0 0 24px rgba(2, 132, 199, 0.35);
     }
 
     .hero-sub {
       font-family: var(--ui);
       font-weight: 300;
-      font-size: 0.74rem;
-      color: var(--text-dim);
-      line-height: 1.9;
-      letter-spacing: 0.04em;
-      max-width: 620px;
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 520px;
+      margin: 0 auto 3rem;
+      line-height: 1.75;
     }
 
-    /* ── TERMINAL BLOCK ── */
-    .terminal {
-      width: 100%;
-      background: var(--panel);
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1px;
+      background: var(--border);
       border: 1px solid var(--border);
       border-radius: 8px;
       overflow: hidden;
-      margin-top: 0.5rem;
-      box-shadow: 0 4px 32px rgba(0, 0, 0, 0.4);
+      max-width: 760px;
+      margin: 0 auto 0.5rem;
     }
 
-    body.light .terminal {
-      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
-    }
-
-    .terminal-bar {
+    .hero-stat {
+      background: var(--panel);
+      padding: 16px 10px;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 7px;
-      padding: 0.7rem 1.1rem;
+      gap: 6px;
+      text-align: center;
+      transition: background 0.15s;
+    }
+
+    .hero-stat:hover {
       background: var(--panel-alt);
-      border-bottom: 1px solid var(--border);
     }
 
-    .tbar-dot {
-      width: 11px;
-      height: 11px;
-      border-radius: 50%;
-    }
-
-    .tbar-dot.r {
-      background: #ff5f57;
-    }
-
-    .tbar-dot.y {
-      background: #febc2e;
-    }
-
-    .tbar-dot.g {
-      background: #28c840;
-    }
-
-    .tbar-label {
-      margin-left: auto;
-      font-size: 0.65rem;
-      color: var(--text-dim);
-      letter-spacing: 0.05em;
-      opacity: 0.5;
-    }
-
-    .terminal-body {
-      padding: 1.75rem 2rem;
-    }
-
-    .t-line {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: baseline;
-      margin-bottom: 0.45rem;
-    }
-
-    .t-line.gap {
-      margin-bottom: 1.3rem;
-    }
-
-    .t-line:last-child {
-      margin-bottom: 0;
-    }
-
-    .prompt {
-      font-family: 'Share Tech Mono', monospace;
+    .hero-stat-value {
+      font-family: 'Exo 2', sans-serif;
+      font-weight: 700;
+      font-size: 1.75rem;
       color: var(--accent);
-      white-space: nowrap;
-      font-size: 0.8rem;
-      margin-right: 0.6rem;
-      user-select: none;
+      letter-spacing: 0.02em;
     }
 
-    .cmd {
-      font-family: 'Share Tech Mono', monospace;
-      color: var(--text);
-      font-size: 0.8rem;
-    }
-
-    .out {
-      font-family: 'Share Tech Mono', monospace;
-      width: 100%;
-      padding: 0.2rem 0 0.2rem 1.5rem;
-      font-size: 0.76rem;
-    }
-
-    .out-hl {
-      color: var(--text-dim);
-    }
-
-    .out-acc {
-      color: var(--accent);
-    }
-
-    .out-dim {
+    .hero-stat-unit {
+      font-family: var(--ui);
+      font-weight: 500;
+      font-size: 0.85rem;
       color: var(--muted);
+      letter-spacing: 0.02em;
+      margin-left: 3px;
     }
 
-    .cursor {
-      display: inline-block;
-      width: 8px;
-      height: 14px;
-      background: var(--accent);
-      vertical-align: middle;
-      margin-left: 2px;
-      animation: blink 1s step-end infinite;
+    .hero-stat-label {
+      font-family: var(--ui);
+      font-weight: 500;
+      font-size: 0.72rem;
+      letter-spacing: 0.02em;
+      color: var(--text-dim);
+      line-height: 1.35;
     }
 
-    @keyframes blink {
+    @media (max-width: 700px) {
+      .hero-stats {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
 
-      0%,
-      100% {
-        opacity: 1
+    @media (max-width: 480px) {
+      .hero-stats {
+        grid-template-columns: repeat(2, 1fr);
       }
 
-      50% {
-        opacity: 0
+      .hero-stat {
+        padding: 14px 8px;
+      }
+
+      .hero-stat-value {
+        font-size: 1.45rem;
+      }
+
+      .hero-stat-label {
+        font-size: 0.66rem;
+      }
+
+      .hero-tagline,
+      .hero-sub {
+        font-size: 0.88rem;
       }
     }
 
     /* ── SECTION LABEL ── */
     .section-label {
       font-family: 'Share Tech Mono', monospace;
-      font-size: 0.6rem;
-      letter-spacing: 0.22em;
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
       color: var(--accent);
-      margin: 3.5rem 0 1.5rem;
-      display: flex; align-items: center; gap: 8px;
-      background: var(--panel); border: 1px solid var(--border); padding: 2px 10px; border-radius: 4px;
-    }
-    .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
-
-    /* ── MANIFESTO ── */
-    .manifesto-strip {
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 2rem 0;
-      margin-bottom: 0.5rem;
-    }
-    .manifesto-text {
-      font-size: clamp(0.82rem, 2vw, 1rem);
-      color: var(--text);
-      line-height: 1.9;
-      letter-spacing: 0.02em;
+      margin: 4.5rem 0 1.75rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      padding: 4px 12px;
+      border-radius: 4px;
     }
 
-    /* ── HERO STATS ── */
-    .hero-stats { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 1.5rem; }
-    .stat-chip { display: flex; flex-direction: column; padding: 10px 16px; background: var(--panel); border: 1px solid var(--border); border-radius: 4px; min-width: 80px; }
-    .stat-val { font-family: 'Exo 2', sans-serif; font-weight: 700; font-size: 1rem; color: var(--accent); letter-spacing: 0.04em; line-height: 1.2; }
-    .stat-label { font-family: 'Share Tech Mono', monospace; font-size: 0.52rem; letter-spacing: 0.18em; color: var(--muted); margin-top: 4px; }
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .hero+.section-label {
+      margin-top: 2.5rem;
+    }
+
 
     /* ── BIO ── */
     .bio {
@@ -529,8 +537,7 @@
       font-weight: 300;
       color: var(--muted);
       font-size: 0.92rem;
-      line-height: 2;
-      max-width: 720px;
+      line-height: 1.9;
       letter-spacing: 0.02em;
     }
 
@@ -546,41 +553,134 @@
       margin-top: 1.2rem;
     }
 
-    /* ── GRID (domains) ── */
+    /* ── ABOUT FACTS ── */
+    .about-facts {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-top: 1.5rem;
+    }
+
+    .about-fact {
+      background: var(--panel);
+      padding: 20px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      transition: background 0.2s;
+    }
+
+    .about-fact:hover {
+      background: var(--panel-alt);
+    }
+
+    .about-fact-label {
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .about-fact-value {
+      font-family: 'Exo 2', sans-serif;
+      font-weight: 600;
+      font-size: 0.88rem;
+      color: var(--text);
+      letter-spacing: 0.02em;
+    }
+
+    @media (max-width: 640px) {
+      .about-facts {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ── GRID (domains, matches h3ad-sec.github.io module-card) ── */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      grid-template-columns: repeat(4, 1fr);
       gap: 1px;
       border: 1px solid var(--border);
-      border-radius: 6px;
+      border-radius: 10px;
       overflow: hidden;
       background: var(--border);
     }
 
-    .card {
-      background: var(--panel);
-      padding: 1.4rem 1.6rem;
-      transition: background 0.15s;
-      cursor: default;
+    @media (max-width: 1000px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
-    .card:hover { background: var(--panel-alt); }
+    @media (max-width: 560px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background: var(--panel);
+      padding: 1.5rem 1.35rem;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      min-height: 150px;
+      cursor: default;
+      transition: background 0.2s, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .card:hover {
+      background: var(--panel-alt);
+      transform: translateY(-4px);
+      box-shadow: 0 14px 32px -16px rgba(0, 0, 0, 0.45);
+    }
+
+    .card:hover::before {
+      opacity: 1;
+    }
+
+    body.light .card:hover {
+      box-shadow: 0 14px 26px -16px rgba(0, 0, 0, 0.12);
+    }
 
     .card-title {
-      font-family: 'Share Tech Mono', monospace;
+      font-family: 'Exo 2', sans-serif;
+      font-weight: 600;
+      color: var(--text);
+      font-size: 0.88rem;
+      letter-spacing: 0.01em;
+      margin-bottom: 0.5rem;
+      transition: color 0.2s;
+    }
+
+    .card:hover .card-title {
       color: var(--accent);
-      font-size: 0.6rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      margin-bottom: 0.65rem;
     }
 
     .card-desc {
       font-family: var(--ui);
       font-weight: 400;
       color: var(--muted);
-      font-size: 0.7rem;
-      line-height: 1.75;
+      font-size: 0.8rem;
+      line-height: 1.65;
     }
 
     /* ── PRINCIPLES ── */
@@ -602,149 +702,235 @@
     }
 
     .p-num {
+      font-family: 'Share Tech Mono', monospace;
+      font-weight: 700;
       color: var(--accent);
-      font-size: 0.6rem;
-      letter-spacing: 0.08em;
-      min-width: 22px;
-      padding-top: 4px;
-      opacity: 0.5;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      min-width: 30px;
+      padding-top: 2px;
     }
 
     .p-body {
-      color: var(--muted);
-      font-size: 0.77rem;
-      line-height: 1.85;
+      color: var(--text-dim);
+      font-size: 0.85rem;
+      line-height: 1.9;
     }
 
     .p-body strong {
-      color: var(--text-dim);
+      color: var(--text);
+      font-weight: 600;
     }
 
-    /* ── PLATFORM MODULES ── */
-    .modules {
+    /* ── PLATFORM CARDS (matches other hub pages' tool-feature pattern) ── */
+    .tool-features {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-      gap: 1px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      overflow: hidden;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
     }
+    @media (max-width: 1100px) { .tool-features { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 560px) { .tool-features { grid-template-columns: 1fr; } }
 
-    .module-link {
+    .tool-feature {
+      --tf-rgb: 0, 212, 255;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 24px 24px 20px;
       display: flex;
       flex-direction: column;
-      gap: 4px;
-      padding: 1.2rem 1.4rem;
-      background: var(--panel);
-      transition: background 0.15s;
+      gap: 12px;
       position: relative;
       overflow: hidden;
+      min-height: 240px;
+      transition: border-color 0.2s, background 0.2s, transform 0.2s, box-shadow 0.2s;
     }
 
-    .module-link::before {
+    .tool-feature::before {
       content: '';
       position: absolute;
       top: 0;
       left: 0;
-      width: 2px;
-      height: 100%;
-      background: var(--accent);
-      transform: scaleY(0);
-      transform-origin: bottom;
-      transition: transform 0.2s ease;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgb(var(--tf-rgb)), transparent);
+      opacity: 0.6;
     }
 
-    .module-link:hover {
-      background: var(--panel-alt);
+    .tool-feature:hover {
+      border-color: rgb(var(--tf-rgb));
+      background: rgba(var(--tf-rgb), 0.02);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
     }
 
-    .module-link:hover::before {
-      transform: scaleY(1);
+    body.light .tool-feature:hover {
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
     }
 
-    .module-link:hover .ml-name {
-      color: var(--accent);
+    .tool-feature.tf-soon:hover {
+      transform: none;
+      box-shadow: none;
     }
 
-    .ml-name {
-      color: var(--text-dim);
-      font-size: 0.72rem;
-      letter-spacing: 0.06em;
-      transition: color 0.15s;
-    }
-
-    .ml-desc {
-      color: var(--muted);
-      font-size: 0.62rem;
-    }
-
-    .ml-arrow {
-      color: var(--muted-dim);
-      font-size: 12px;
-      margin-top: 0.7rem;
-      transition: color 0.15s;
-    }
-
-    .module-link:hover .ml-arrow {
-      color: var(--accent);
-    }
-
-    /* ── CONTACT SECTION ── */
-    .contact-wrap {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1.6rem 2rem;
-    }
-
-    .contact-row {
+    .tf-header {
       display: flex;
-      align-items: baseline;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-      margin-bottom: 0.5rem;
+      align-items: flex-start;
+      gap: 12px;
+      min-height: 50px;
     }
 
-    .contact-row:last-child {
-      margin-bottom: 0;
+    .tf-header .card-badge {
+      margin-left: auto;
+      flex-shrink: 0;
     }
 
-    .c-prompt {
-      color: var(--accent);
+    .tf-header-text {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .tf-name {
+      font-family: 'Exo 2', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.06em;
+      color: var(--text);
+    }
+
+    .tf-tagline {
+      font-family: var(--ui);
+      font-weight: 400;
+      font-size: 0.74rem;
+      color: rgb(var(--tf-rgb));
+      letter-spacing: 0.02em;
+      margin-top: 2px;
+    }
+
+    .tf-body {
+      font-family: var(--ui);
+      font-weight: 400;
       font-size: 0.78rem;
-      user-select: none;
+      color: var(--text-dim);
+      line-height: 1.7;
+      flex: 1;
+    }
+
+    .tf-link {
+      font-family: 'Exo 2', sans-serif;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      color: rgb(var(--tf-rgb));
+      padding: 7px 14px;
+      border: 1px solid rgba(var(--tf-rgb), 0.35);
+      border-radius: 3px;
+      transition: 0.15s;
+      align-self: flex-start;
+      margin-top: 2px;
+    }
+
+    .tf-link:hover {
+      background: rgba(var(--tf-rgb), 0.1);
+    }
+
+    .card-badge {
+      font-size: 0.6rem;
+      letter-spacing: 0.14em;
+      padding: 3px 8px;
+      border-radius: 2px;
+      text-transform: uppercase;
       white-space: nowrap;
     }
 
-    .c-cmd {
-      color: var(--text-dim);
-      font-size: 0.78rem;
+    .badge-soon {
+      background: rgba(98, 128, 156, 0.12);
+      color: var(--muted);
+      border: 1px solid var(--border);
     }
 
-    .c-out {
-      padding-left: 1.5rem;
-      font-size: 0.74rem;
+    .tool-feature.tf-soon {
+      opacity: 0.65;
+    }
+
+    .tool-feature.tf-soon:hover {
+      border-color: var(--border);
+      background: var(--panel);
+    }
+
+    .tf-link-soon {
+      color: var(--muted);
+      border-color: var(--border);
+      cursor: default;
+      pointer-events: none;
+    }
+
+    .tf-link-soon:hover {
+      background: transparent;
+    }
+
+
+    /* ── CONTACT SECTION ── */
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: baseline;
+      gap: 6px 14px;
+      flex-wrap: wrap;
+      padding: 1rem 1.4rem;
+      background: var(--panel);
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+
+    .contact-item:hover {
+      background: var(--panel-alt);
+    }
+
+    .contact-label {
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      min-width: 82px;
+      flex-shrink: 0;
     }
 
     .c-email {
+      color: var(--text);
+      font-size: 0.88rem;
+      font-family: 'Exo 2', sans-serif;
+      font-weight: 600;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .contact-item:hover .c-email {
       color: var(--accent);
-      font-size: 0.82rem;
-      border-bottom: 1px solid rgba(0, 212, 255, 0.3);
-      transition: border-color 0.2s;
+      border-bottom-color: rgba(0, 212, 255, 0.4);
     }
 
-    body.light .c-email {
-      border-bottom-color: rgba(2, 132, 199, 0.3);
-    }
-
-    .c-email:hover {
-      border-color: var(--accent);
+    body.light .contact-item:hover .c-email {
+      border-bottom-color: rgba(2, 132, 199, 0.4);
     }
 
     .c-note {
-      color: var(--muted);
-      font-size: 0.7rem;
+      color: var(--text-dim);
+      font-size: 0.72rem;
+      flex-basis: 100%;
     }
 
     /* ── BADGE ── */
@@ -759,13 +945,15 @@
       text-transform: uppercase;
     }
 
-    .badge.online, .badge-live {
+    .badge.online,
+    .badge-live {
       background: rgba(0, 212, 255, 0.1);
       color: var(--accent);
       border: 1px solid rgba(0, 212, 255, 0.25);
     }
 
-    body.light .badge.online, body.light .badge-live {
+    body.light .badge.online,
+    body.light .badge-live {
       background: rgba(2, 132, 199, 0.08);
       border-color: rgba(2, 132, 199, 0.25);
     }
@@ -833,12 +1021,50 @@
       opacity: 0.85;
     }
 
-    .footer-credit-row { display:flex; align-items:center; justify-content:center; gap:10px; flex-wrap:wrap; }
-    .footer-credit-pill { display:inline-flex; flex-wrap:nowrap; align-items:center; gap:6px; padding:4px 12px; border:1px solid var(--border); border-radius:999px; text-decoration:none; font-family:'Exo 2',sans-serif; font-weight:500; font-size:var(--fs-xs); white-space:nowrap; color: var(--muted); transition:border-color .15s; }
-    .footer-credit-pill:hover { border-color:var(--accent); }
-    .footer-credit-pill .credit-tool { font-weight:700; letter-spacing:2px; color: var(--text); }
-    .footer-credit-pill .credit-by { color:var(--muted); }
-    .footer-credit-pill .credit-name { color:var(--accent); font-weight:700; letter-spacing:.5px; }
+    .footer-credit-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .footer-credit-pill {
+      display: inline-flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      text-decoration: none;
+      font-family: 'Exo 2', sans-serif;
+      font-weight: 500;
+      font-size: var(--fs-xs);
+      white-space: nowrap;
+      color: var(--muted);
+      transition: border-color .15s;
+    }
+
+    .footer-credit-pill:hover {
+      border-color: var(--accent);
+    }
+
+    .footer-credit-pill .credit-tool {
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--text);
+    }
+
+    .footer-credit-pill .credit-by {
+      color: var(--muted);
+    }
+
+    .footer-credit-pill .credit-name {
+      color: var(--accent);
+      font-weight: 700;
+      letter-spacing: .5px;
+    }
 
     /* ── SCROLLBAR ── */
     ::-webkit-scrollbar {
@@ -915,18 +1141,34 @@
     }
 
     /* ── RESPONSIVE ── */
-    body.nav-compact .nav-links { display: none; }
-    body.nav-compact .hamburger { display: flex; }
+    body.nav-compact .nav-links {
+      display: none;
+    }
+
+    body.nav-compact .hamburger {
+      display: flex;
+    }
 
     @media (max-width: 768px) {
-      .page { padding-left: 1.25rem; padding-right: 1.25rem; }
-      .hero-title { font-size: clamp(1.8rem, 4vw, 2.8rem); }
-      .grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+      .page {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+      }
+
+      .grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      }
     }
 
     @media (max-width: 640px) {
-      .nav-links { display: none; }
-      .hamburger { display: flex; }
+      .nav-links {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
       .page {
         padding: calc(var(--nav-h) + 1rem) 1.1rem 4rem;
       }
@@ -935,25 +1177,12 @@
         padding: 2rem 0 1.5rem;
       }
 
-      .terminal-body {
-        padding: 1.2rem 1.25rem;
-        overflow-x: auto;
-      }
-
-      .terminal {
-        overflow-x: auto;
-      }
-
       footer {
         padding: 1.2rem 1.25rem;
       }
 
       .grid {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      }
-
-      .modules {
-        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
       }
     }
 
@@ -966,51 +1195,13 @@
         grid-template-columns: 1fr;
       }
 
-      .modules {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-stats {
-        gap: 6px;
-      }
-
-      .stat-chip {
-        min-width: 68px;
-        padding: 8px 12px;
-      }
-
-      .terminal-body {
-        padding: 1rem 1rem;
-        overflow-x: auto;
-      }
-
-      .out {
-        padding-left: 0.75rem;
-        word-break: break-word;
-      }
-
-      .prompt {
-        font-size: 0.72rem;
-      }
-
-      .contact-wrap {
-        padding: 1.2rem 1.1rem;
+      .contact-item {
+        padding: 0.9rem 1.1rem;
       }
 
       .c-note {
-        display: block;
-        padding-left: 0;
         margin-top: 2px;
         font-size: 0.65rem;
-      }
-
-      .c-out {
-        padding-left: 0.75rem;
-        word-break: break-all;
-      }
-
-      .manifesto-text {
-        font-size: 0.78rem;
       }
 
       .bio {
@@ -1027,188 +1218,188 @@
         padding: calc(var(--nav-h) + 0.5rem) 0.75rem 2.5rem;
       }
 
-      .stat-chip {
-        min-width: 58px;
-        padding: 6px 8px;
-      }
-
-      .stat-val {
-        font-size: 0.9rem;
-      }
-
-      .hero-stats {
-        gap: 4px;
-      }
     }
-    .xv-nav-pill{display:flex;flex-direction:column;align-items:flex-start;gap:1px;margin-left:10px;padding-left:10px;border-left:1px solid var(--border);opacity:1;transform:none;pointer-events:auto;white-space:nowrap;flex-shrink:0;}
-    .xv-pill-name{font-family:'Exo 2',sans-serif;font-weight:700;font-size:13px;letter-spacing:4px;line-height:1;}
-    .xv-pill-accent{color:var(--accent);}
-    .xv-pill-text{color:var(--text);}
-    .xv-pill-tagline{font-family:'Exo 2',sans-serif;font-weight:400;font-size:8px;color:var(--muted);letter-spacing:1.5px;}
-    @media(max-width:1000px){
-      .xv-nav-pill{opacity:1;transform:none;pointer-events:auto;transition:none;}
+
+    .xv-nav-pill {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1px;
+      margin-left: 10px;
+      padding-left: 10px;
+      border-left: 1px solid var(--border);
+      opacity: 1;
+      transform: none;
+      pointer-events: auto;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .xv-pill-name {
+      font-family: 'Exo 2', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 4px;
+      line-height: 1;
+    }
+
+    .xv-pill-accent {
+      color: var(--accent);
+    }
+
+    .xv-pill-text {
+      color: var(--text);
+    }
+
+    .xv-pill-tagline {
+      font-family: 'Exo 2', sans-serif;
+      font-weight: 400;
+      font-size: 8px;
+      color: var(--muted);
+      letter-spacing: 1.5px;
+    }
+
+    @media(max-width:1000px) {
+      .xv-nav-pill {
+        opacity: 1;
+        transform: none;
+        pointer-events: auto;
+        transition: none;
+      }
     }
 
     /* ── UI UPGRADES ── */
 
-    /* Stat chips */
-    .stat-chip { transition: background 0.15s, border-color 0.15s, box-shadow 0.15s; }
-    .stat-chip:hover {
-      border-color: rgba(0, 212, 255, 0.28);
-      background: var(--panel-alt);
-      box-shadow: 0 0 20px rgba(0, 212, 255, 0.07);
-    }
-
-    /* Grid card left-accent on hover */
-    .card { position: relative; overflow: hidden; }
-    .card::after {
-      content: '';
-      position: absolute;
-      left: 0; top: 0; bottom: 0;
-      width: 2px;
-      background: var(--accent);
-      transform: scaleY(0);
-      transform-origin: bottom;
-      transition: transform 0.22s ease;
-    }
-    .card:hover::after { transform: scaleY(1); }
-    .card { transition: background 0.15s, box-shadow 0.15s; }
-    .card:hover { box-shadow: inset 0 0 40px rgba(0, 212, 255, 0.025); }
-
-    /* Terminal ambient glow */
-    .terminal { transition: box-shadow 0.3s; }
-    .terminal:hover {
-      box-shadow: 0 4px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 212, 255, 0.1);
-    }
-    body.light .terminal:hover { box-shadow: 0 4px 32px rgba(0,0,0,0.1), 0 0 0 1px rgba(2,132,199,0.15); }
-
-    /* Module card glow */
-    .module-link { transition: background 0.15s, box-shadow 0.15s; }
-    .module-link:hover { box-shadow: 0 0 24px rgba(0, 212, 255, 0.05); }
-
-    /* Manifesto left bar */
-    .manifesto-strip { position: relative; padding-left: 1.5rem; }
-    .manifesto-strip::before {
-      content: '';
-      position: absolute;
-      left: 0; top: 0; bottom: 0;
-      width: 2px;
-      background: linear-gradient(to bottom, var(--accent) 0%, transparent 100%);
-      opacity: 0.35;
-    }
-
-    /* Contact wrap hover */
-    .contact-wrap { transition: border-color 0.2s, box-shadow 0.2s; }
-    .contact-wrap:hover {
-      border-color: rgba(0, 212, 255, 0.18);
-      box-shadow: 0 0 24px rgba(0, 212, 255, 0.04);
-    }
-    body.light .contact-wrap:hover { box-shadow: 0 0 16px rgba(2,132,199,0.06); }
-
-    /* Principle numbers */
-    .p-num { font-family: 'Share Tech Mono', monospace; }
-
-    /* Hero title glow pulse (subtle) */
-    .hero-title span {
-      text-shadow: 0 0 32px rgba(0, 212, 255, 0.4), 0 0 64px rgba(0, 212, 255, 0.12);
-    }
-    body.light .hero-title span { text-shadow: 0 0 24px rgba(2, 132, 199, 0.35); }
-
     /* Section label glow dot */
-    .section-label { position: relative; }
+    .section-label {
+      position: relative;
+    }
 
     /* Badge pulse enhancement */
-    .badge.online { box-shadow: 0 0 12px rgba(0, 212, 255, 0.12); }
+    .badge.online {
+      box-shadow: 0 0 12px rgba(0, 212, 255, 0.12);
+    }
 
     /* ── CREATIVE ANIMATIONS ── */
 
-    /* Ambient orbs */
-    .orb { position: fixed; border-radius: 50%; filter: blur(100px); pointer-events: none; z-index: 0; will-change: transform; }
-    .orb-1 { width: 700px; height: 700px; background: radial-gradient(circle, rgba(0,212,255,.065) 0%, transparent 70%); top: -250px; right: -200px; animation: orb-drift-1 22s ease-in-out infinite; }
-    .orb-2 { width: 500px; height: 500px; background: radial-gradient(circle, rgba(88,166,255,.05) 0%, transparent 70%); bottom: 50px; left: -150px; animation: orb-drift-2 28s ease-in-out infinite; }
-    @keyframes orb-drift-1 { 0%,100%{transform:translate(0,0) scale(1);} 33%{transform:translate(-60px,100px) scale(1.1);} 66%{transform:translate(40px,-50px) scale(0.9);} }
-    @keyframes orb-drift-2 { 0%,100%{transform:translate(0,0);} 50%{transform:translate(80px,-100px) scale(1.08);} }
-    body.light .orb-1 { background: radial-gradient(circle, rgba(2,132,199,.04) 0%, transparent 70%); }
-    body.light .orb-2 { background: radial-gradient(circle, rgba(37,99,235,.03) 0%, transparent 70%); }
-
-    /* Subtle grid texture */
-    body::after { content:''; position:fixed; inset:0; background-image:url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 0L0 0 0 40' fill='none' stroke='%23ffffff' stroke-opacity='.014' stroke-width='1'/%3E%3C/svg%3E"); pointer-events:none; z-index:0; }
-    body.light::after { background-image:url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 0L0 0 0 40' fill='none' stroke='%23000000' stroke-opacity='.04' stroke-width='1'/%3E%3C/svg%3E"); }
-
     /* Nav scroll glow */
-    .nav.scrolled { border-bottom-color: rgba(0,212,255,.12); box-shadow: 0 1px 24px rgba(0,212,255,.05); }
-    body.light .nav.scrolled { box-shadow: 0 1px 16px rgba(2,132,199,.07); }
-
-    /* Hero tag flicker */
-    @keyframes flicker { 0%,94%,100%{opacity:.75;} 95%{opacity:.2;} 96%{opacity:.8;} 97.5%{opacity:.3;} 99%{opacity:.7;} }
-    .hero-tag { animation: flicker 7s infinite; }
-
-    /* Hero title glitch */
-    @keyframes glitch {
-      0%,87%,100% { text-shadow:0 0 32px rgba(0,212,255,.4),0 0 64px rgba(0,212,255,.12); transform:none; }
-      88%  { transform:translate(-3px,0) skew(-.5deg); text-shadow:-2px 0 #ff006e,2px 0 #00d4ff; }
-      89%  { transform:translate(3px,0); text-shadow:2px 0 #ff006e,0 0 24px rgba(0,212,255,.6); }
-      89.5%{ transform:translate(-1px,0); text-shadow:0 0 32px rgba(0,212,255,.5); }
-      90%  { transform:translate(2px,-1px); text-shadow:1px 0 #ff006e,-1px 0 #00d4ff; }
-      91%  { transform:none; text-shadow:0 0 32px rgba(0,212,255,.4),0 0 64px rgba(0,212,255,.12); }
+    .nav.scrolled {
+      border-bottom-color: rgba(0, 212, 255, .12);
+      box-shadow: 0 1px 24px rgba(0, 212, 255, .05);
     }
-    .hero-title span { display:inline-block; animation: glitch 9s infinite; }
 
-    /* Terminal scan line */
-    .terminal-body { position:relative; overflow:hidden; }
-    .terminal-body::after { content:''; position:absolute; top:-5%; left:0; right:0; height:3px; background:linear-gradient(to bottom,transparent,rgba(0,212,255,.08),transparent); animation:scan-line 5s linear infinite; pointer-events:none; z-index:2; }
-    @keyframes scan-line { from{top:-5%} to{top:105%} }
-
-    /* Terminal line stagger entrance */
-    @keyframes t-reveal { from{opacity:0;transform:translateX(-6px);} to{opacity:1;transform:none;} }
-    .terminal-body .t-line { animation:t-reveal 0.35s ease forwards; opacity:0; }
-    .terminal-body .t-line:nth-child(1)  { animation-delay:.2s; }
-    .terminal-body .t-line:nth-child(2)  { animation-delay:.4s; }
-    .terminal-body .t-line:nth-child(3)  { animation-delay:.9s; }
-    .terminal-body .t-line:nth-child(4)  { animation-delay:1.1s; }
-    .terminal-body .t-line:nth-child(5)  { animation-delay:1.7s; }
-    .terminal-body .t-line:nth-child(6)  { animation-delay:1.9s; }
-    .terminal-body .t-line:nth-child(7)  { animation-delay:2.5s; }
-    .terminal-body .t-line:nth-child(8)  { animation-delay:2.7s; }
-    .terminal-body .t-line:nth-child(9)  { animation-delay:3.1s; }
-    .terminal-body .t-line:nth-child(10) { animation-delay:3.2s; }
+    body.light .nav.scrolled {
+      box-shadow: 0 1px 16px rgba(2, 132, 199, .07);
+    }
 
     /* Scroll reveal */
-    [data-reveal] { opacity:0; transform:translateY(20px); transition:opacity .6s ease,transform .6s ease; }
-    [data-reveal].visible { opacity:1; transform:none; }
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+
+    [data-reveal].visible {
+      opacity: 1;
+      transform: none;
+    }
 
     /* Stagger grid children */
-    [data-stagger] > * { opacity:0; transform:translateY(14px); transition:opacity .45s ease,transform .45s ease; }
-    [data-stagger].visible > *:nth-child(1) { opacity:1;transform:none;transition-delay:.00s; }
-    [data-stagger].visible > *:nth-child(2) { opacity:1;transform:none;transition-delay:.07s; }
-    [data-stagger].visible > *:nth-child(3) { opacity:1;transform:none;transition-delay:.14s; }
-    [data-stagger].visible > *:nth-child(4) { opacity:1;transform:none;transition-delay:.21s; }
-    [data-stagger].visible > *:nth-child(5) { opacity:1;transform:none;transition-delay:.28s; }
-    [data-stagger].visible > *:nth-child(6) { opacity:1;transform:none;transition-delay:.35s; }
-    [data-stagger].visible > *:nth-child(7) { opacity:1;transform:none;transition-delay:.42s; }
-    [data-stagger].visible > *:nth-child(8) { opacity:1;transform:none;transition-delay:.49s; }
+    [data-stagger]>* {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity .45s ease, transform .45s ease;
+    }
 
-    /* Stat chip pop-in */
-    @keyframes chip-pop { from{opacity:0;transform:scale(.88);} to{opacity:1;transform:scale(1);} }
-    .hero-stats[data-stagger].visible > *:nth-child(1) { animation:chip-pop .4s ease .05s both; }
-    .hero-stats[data-stagger].visible > *:nth-child(2) { animation:chip-pop .4s ease .12s both; }
-    .hero-stats[data-stagger].visible > *:nth-child(3) { animation:chip-pop .4s ease .19s both; }
-    .hero-stats[data-stagger].visible > *:nth-child(4) { animation:chip-pop .4s ease .26s both; }
+    [data-stagger].visible>*:nth-child(1) {
+      opacity: 1;
+      transform: none;
+      transition-delay: .00s;
+    }
+
+    [data-stagger].visible>*:nth-child(2) {
+      opacity: 1;
+      transform: none;
+      transition-delay: .07s;
+    }
+
+    [data-stagger].visible>*:nth-child(3) {
+      opacity: 1;
+      transform: none;
+      transition-delay: .14s;
+    }
+
+    [data-stagger].visible>*:nth-child(4) {
+      opacity: 1;
+      transform: none;
+      transition-delay: .21s;
+    }
+
+    [data-stagger].visible>*:nth-child(5) {
+      opacity: 1;
+      transform: none;
+      transition-delay: .28s;
+    }
+
+    [data-stagger].visible>*:nth-child(6) {
+      opacity: 1;
+      transform: none;
+      transition-delay: .35s;
+    }
+
+    [data-stagger].visible>*:nth-child(7) {
+      opacity: 1;
+      transform: none;
+      transition-delay: .42s;
+    }
+
+    [data-stagger].visible>*:nth-child(8) {
+      opacity: 1;
+      transform: none;
+      transition-delay: .49s;
+    }
+
 
     /* Section label entrance */
-    @keyframes label-in { from{opacity:0;transform:translateX(-10px);} to{opacity:1;transform:none;} }
-    .section-label[data-reveal].visible { animation:label-in .45s ease forwards; }
+    @keyframes label-in {
+      from {
+        opacity: 0;
+        transform: translateX(-10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    .section-label[data-reveal].visible {
+      animation: label-in .45s ease forwards;
+    }
 
     /* Principle hover */
-    .principle { transition: padding-left .2s ease; }
-    .principle:hover { padding-left: .5rem; }
-    .principle:hover .p-num { opacity: 1; }
-    .p-num { transition: opacity .2s; }
+    .principle {
+      transition: padding-left .2s ease;
+    }
+
+    .principle:hover {
+      padding-left: .5rem;
+    }
 
     /* Reduced motion */
     @media (prefers-reduced-motion: reduce) {
-      [data-reveal],[data-stagger]>* { opacity:1!important;transform:none!important;transition:none!important; }
-      .hero-tag,.hero-title span,.terminal-body::after,.terminal-body .t-line,.orb-1,.orb-2 { animation:none!important;opacity:1!important; }
+
+      [data-reveal],
+      [data-stagger]>* {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+
+      .hero-title span {
+        animation: none !important;
+        opacity: 1 !important;
+      }
     }
 
     /* ── FOCUS RINGS (a11y) ── */
@@ -1217,108 +1408,397 @@
       outline-offset: 2px;
       border-radius: 3px;
     }
+
     .nav-links a:focus-visible,
     .nav-drawer a:focus-visible,
-    .module-link:focus-visible,
+    .tf-link:focus-visible,
     .c-email:focus-visible {
       outline: 2px solid var(--accent);
       outline-offset: 2px;
     }
+
     .toggle-track:focus-visible {
       outline: 2px solid var(--accent);
       outline-offset: 3px;
       border-radius: 50px;
     }
 
-    /* ── MODULE STATUS BADGE ── */
-    .ml-status {
+    /* ── DROPDOWN KEYBOARD ── */
+    .nav-item[aria-expanded="true"] .nav-dropdown {
+      display: block;
+    }
+
+    /* ── STACK ── */
+    .stack-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .stack-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      background: var(--panel);
+      padding: 0.85rem 1.4rem;
+      transition: background 0.15s;
+    }
+
+    .stack-row:hover {
+      background: var(--panel-alt);
+    }
+
+    .stack-cat {
+      font-family: 'Exo 2', sans-serif;
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 0.01em;
+      color: var(--accent);
+      min-width: 150px;
+      flex-shrink: 0;
+      padding-top: 2px;
+    }
+
+    .stack-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .stack-tag {
+      font-family: var(--ui);
+      font-weight: 400;
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      background: var(--panel-alt);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 4px 10px;
+      letter-spacing: 0.01em;
+    }
+
+    .stack-row:hover .stack-tag {
+      border-color: rgba(0, 212, 255, .18);
+    }
+
+    body.light .stack-row:hover .stack-tag {
+      border-color: rgba(2, 132, 199, .22);
+    }
+
+    /* ── CERTS (matches h3ad-sec.github.io module-card) ── */
+    .certs-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    @media (max-width: 1000px) {
+      .certs-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 560px) {
+      .certs-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .cert-card {
+      background: var(--panel);
+      padding: 1.5rem 1.35rem;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      position: relative;
+      overflow: hidden;
+      min-height: 130px;
+      transition: background 0.2s, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s;
+    }
+
+    .cert-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .cert-card:hover {
+      background: var(--panel-alt);
+      transform: translateY(-4px);
+      box-shadow: 0 14px 32px -16px rgba(0, 0, 0, 0.45);
+    }
+
+    .cert-card:hover::before {
+      opacity: 1;
+    }
+
+    body.light .cert-card:hover {
+      box-shadow: 0 14px 26px -16px rgba(0, 0, 0, 0.12);
+    }
+
+    .cert-name {
+      font-family: 'Exo 2', sans-serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--text);
+      line-height: 1.4;
+      transition: color 0.2s;
+    }
+
+    .cert-issuer {
+      font-family: var(--ui);
+      font-weight: 400;
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.65;
+      margin-top: 4px;
+    }
+
+    .cert-card:hover .cert-name {
+      color: var(--accent);
+    }
+
+    .cert-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: auto;
+      padding-top: 8px;
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .cert-badge.earned {
+      color: var(--accent);
+    }
+
+    .cert-badge.progress {
+      color: var(--status-partial);
+    }
+
+    .cert-badge .dot-c {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+
+    .cert-badge.earned .dot-c {
+      animation: pulse 2.2s ease-in-out infinite;
+    }
+
+    /* ── WRITING ── */
+    .writing-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .writing-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      padding: 1.1rem 1.4rem;
+      background: var(--panel);
+      transition: background 0.15s;
+      text-decoration: none;
+    }
+
+    .writing-item:hover {
+      background: var(--panel-alt);
+    }
+
+    .writing-title {
+      font-family: 'Exo 2', sans-serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--text);
+      transition: color 0.15s;
+      line-height: 1.45;
+    }
+
+    .writing-item:hover .writing-title {
+      color: var(--accent);
+    }
+
+    .writing-pub {
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 0.62rem;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .writing-arrow {
+      color: var(--muted);
+      font-size: 14px;
+      flex-shrink: 0;
+      transition: color 0.15s, transform 0.15s;
+    }
+
+    .writing-item:hover .writing-arrow {
+      color: var(--accent);
+      transform: translate(2px, -2px);
+    }
+
+    @media (max-width: 640px) {
+      .stack-cat {
+        min-width: 90px;
+        font-size: 0.52rem;
+      }
+
+      .writing-pub {
+        display: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .stack-row {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+
+    /* ── EXPERIENCE ── */
+    .exp-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .exp-item {
+      background: var(--panel);
+      padding: 1.4rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      transition: background 0.15s;
+    }
+
+    .exp-item:hover {
+      background: var(--panel-alt);
+    }
+
+    .exp-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 2px;
+    }
+
+    .exp-period {
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+
+    .exp-current {
       display: inline-flex;
       align-items: center;
       gap: 4px;
       font-family: 'Share Tech Mono', monospace;
-      font-size: 0.52rem;
-      letter-spacing: 0.12em;
+      font-size: 0.58rem;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      margin-top: auto;
-      padding-top: 0.5rem;
+      color: var(--accent);
     }
-    .ml-status.live { color: var(--accent); }
-    .ml-status.dev { color: var(--muted); }
-    .ml-status .dot-s {
-      width: 4px; height: 4px; border-radius: 50%;
+
+    .exp-current .dot-e {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
       background: currentColor;
-    }
-    .ml-status.live .dot-s { animation: pulse 2.2s ease-in-out infinite; }
-
-    /* ── DROPDOWN KEYBOARD ── */
-    .nav-item[aria-expanded="true"] .nav-dropdown { display: block; }
-
-    /* ── STACK ── */
-    .stack-grid { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
-    .stack-row { display: flex; align-items: flex-start; gap: 1rem; background: var(--panel); padding: 0.85rem 1.4rem; transition: background 0.15s; }
-    .stack-row:hover { background: var(--panel-alt); }
-    .stack-cat { font-family: 'Share Tech Mono', monospace; font-size: 0.56rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); min-width: 120px; flex-shrink: 0; padding-top: 3px; opacity: 0.8; }
-    .stack-tags { display: flex; flex-wrap: wrap; gap: 5px; }
-    .stack-tag { font-family: 'Share Tech Mono', monospace; font-size: 0.6rem; color: var(--text-dim); background: var(--panel-alt); border: 1px solid var(--border); border-radius: 3px; padding: 2px 8px; letter-spacing: 0.03em; }
-    .stack-row:hover .stack-tag { border-color: rgba(0,212,255,.18); }
-    body.light .stack-row:hover .stack-tag { border-color: rgba(2,132,199,.22); }
-
-    /* ── CERTS ── */
-    .certs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
-    .cert-card { background: var(--panel); padding: 1rem 1.2rem; display: flex; flex-direction: column; gap: 4px; transition: background 0.15s; }
-    .cert-card:hover { background: var(--panel-alt); }
-    .cert-issuer { font-family: 'Share Tech Mono', monospace; font-size: 0.5rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
-    .cert-name { font-family: 'Exo 2', sans-serif; font-weight: 500; font-size: 0.72rem; color: var(--text-dim); line-height: 1.4; margin-top: 2px; }
-    .cert-badge { display: inline-flex; align-items: center; gap: 4px; margin-top: 6px; font-family: 'Share Tech Mono', monospace; font-size: 0.48rem; letter-spacing: 0.12em; text-transform: uppercase; }
-    .cert-badge.earned { color: var(--accent); }
-    .cert-badge.progress { color: var(--status-partial); }
-    .cert-badge .dot-c { width: 4px; height: 4px; border-radius: 50%; background: currentColor; }
-    .cert-badge.earned .dot-c { animation: pulse 2.2s ease-in-out infinite; }
-
-    /* ── WRITING ── */
-    .writing-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
-    .writing-item { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding: 1rem 1.4rem; background: var(--panel); transition: background 0.15s; text-decoration: none; }
-    .writing-item:hover { background: var(--panel-alt); }
-    .writing-title { font-family: 'Exo 2', sans-serif; font-size: 0.76rem; color: var(--text-dim); transition: color 0.15s; line-height: 1.4; }
-    .writing-item:hover .writing-title { color: var(--accent); }
-    .writing-pub { font-family: 'Share Tech Mono', monospace; font-size: 0.54rem; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; flex-shrink: 0; }
-    .writing-arrow { color: var(--muted-dim); font-size: 12px; flex-shrink: 0; transition: color 0.15s; }
-    .writing-item:hover .writing-arrow { color: var(--accent); }
-
-    @media (max-width: 640px) {
-      .stack-cat { min-width: 90px; font-size: 0.52rem; }
-      .certs-grid { grid-template-columns: 1fr 1fr; }
-      .writing-pub { display: none; }
-    }
-    @media (max-width: 480px) {
-      .certs-grid { grid-template-columns: 1fr; }
-      .stack-row { flex-direction: column; gap: 0.5rem; }
+      animation: pulse 2.2s ease-in-out infinite;
     }
 
-    /* ── EXPERIENCE ── */
-    .exp-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
-    .exp-item { background: var(--panel); padding: 1.2rem 1.4rem; display: flex; flex-direction: column; gap: 5px; transition: background 0.15s; }
-    .exp-item:hover { background: var(--panel-alt); }
-    .exp-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 2px; }
-    .exp-period { font-family: 'Share Tech Mono', monospace; font-size: 0.58rem; letter-spacing: 0.1em; color: var(--muted); }
-    .exp-current { display: inline-flex; align-items: center; gap: 4px; font-family: 'Share Tech Mono', monospace; font-size: 0.48rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
-    .exp-current .dot-e { width: 4px; height: 4px; border-radius: 50%; background: currentColor; animation: pulse 2.2s ease-in-out infinite; }
-    .exp-role { font-family: 'Exo 2', sans-serif; font-weight: 600; font-size: 0.78rem; color: var(--text-dim); }
-    .exp-desc { font-family: var(--ui); font-weight: 300; font-size: 0.7rem; color: var(--muted); line-height: 1.75; }
+    .exp-role {
+      font-family: 'Exo 2', sans-serif;
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--text);
+    }
+
+    .exp-company {
+      font-family: var(--ui);
+      font-weight: 500;
+      font-size: 0.75rem;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .exp-desc {
+      font-family: var(--ui);
+      font-weight: 300;
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      line-height: 1.7;
+      margin-top: 2px;
+    }
 
     /* ── NAV CURRENT PAGE ── */
-    .nav-links .nav-current { font-family: 'Exo 2', sans-serif; font-weight: 500; font-size: 0.68rem; color: var(--accent); padding: 5px 9px; border-radius: 4px; border: 1px solid rgba(0,212,255,.35); background: var(--primary-dim); white-space: nowrap; flex-shrink: 0; cursor: default; }
-    body.light .nav-links .nav-current { border-color: rgba(2,132,199,.35); }
-    .nav-drawer .nav-current { font-size: 0.75rem; color: var(--accent); padding: 8px 10px; border-radius: 4px; border-left: 2px solid var(--accent); background: var(--primary-dim); cursor: default; }
+    .nav-links .nav-current {
+      font-family: 'Exo 2', sans-serif;
+      font-weight: 500;
+      font-size: 0.68rem;
+      color: var(--accent);
+      padding: 5px 9px;
+      border-radius: 4px;
+      border: 1px solid rgba(0, 212, 255, .35);
+      background: var(--primary-dim);
+      white-space: nowrap;
+      flex-shrink: 0;
+      cursor: default;
+    }
+
+    body.light .nav-links .nav-current {
+      border-color: rgba(2, 132, 199, .35);
+    }
+
+    .nav-drawer .nav-current {
+      font-size: 0.75rem;
+      color: var(--accent);
+      padding: 8px 10px;
+      border-radius: 4px;
+      border-left: 2px solid var(--accent);
+      background: var(--primary-dim);
+      cursor: default;
+    }
   </style>
 </head>
 
 <body>
-  <div class="orb orb-1"></div>
-  <div class="orb orb-2"></div>
   <!-- NAV -->
   <nav class="nav">
-    <button class="hamburger" id="hamburger" onclick="toggleDrawer()" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navDrawer">
+    <button class="hamburger" id="hamburger" onclick="toggleDrawer()" aria-label="Open navigation menu"
+      aria-expanded="false" aria-controls="navDrawer">
       <span></span><span></span><span></span>
     </button>
 
@@ -1328,8 +1808,9 @@
       </a>
     </div>
     <a class="xv-nav-pill" id="xv-nav-pill" href="https://h3ad-sec.github.io/H3AD/" style="text-decoration:none">
-      <span class="xv-pill-name"><span class="xv-pill-accent">H3AD</span><span class="xv-pill-text">/whoami</span></span>
-      <span class="xv-pill-tagline">Cyber Defense Researcher.</span>
+      <span class="xv-pill-name"><span class="xv-pill-accent">H3AD</span><span
+          class="xv-pill-text">/whoami</span></span>
+      <span class="xv-pill-tagline">Security Operations Analyst.</span>
     </a>
 
     <div class="nav-links">
@@ -1358,9 +1839,11 @@
       </div>
       <div class="nav-item">
         <a href="https://h3ad-sec.github.io/H3AD-DETECT/">H3AD-DETECT</a>
-        <div class="nav-dropdown"><div class="nav-dropdown-inner">
-          <a href="https://h3ad-sec.github.io/TRACERULES/" target="_blank" rel="noopener">TRACERULES</a>
-        </div></div>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-inner">
+            <a href="https://h3ad-sec.github.io/TRACERULES/" target="_blank" rel="noopener">TRACERULES</a>
+          </div>
+        </div>
       </div>
       <div class="nav-item">
         <a href="https://h3ad-sec.github.io/H3AD-HUNT/">H3AD-HUNT</a>
@@ -1374,13 +1857,31 @@
       </div>
       <div class="nav-item">
         <a href="https://h3ad-sec.github.io/H3AD-OPS/">H3AD-OPS</a>
-        <div class="nav-dropdown"><div class="nav-dropdown-inner">
-          <a href="https://h3ad-sec.github.io/QUICKTRACE/" target="_blank" rel="noopener">QUICKTRACE</a>
-        </div></div>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-inner">
+            <a href="https://h3ad-sec.github.io/QUICKTRACE/" target="_blank" rel="noopener">QUICKTRACE</a>
+            <a href="https://h3ad-sec.github.io/PHISHOPS/" target="_blank" rel="noopener">PHISHOPS</a>
+          </div>
+        </div>
       </div>
       <a href="https://h3ad-sec.github.io/H3AD-DF/">H3AD-DF</a>
       <a href="https://h3ad-sec.github.io/H3AD-IR/">H3AD-IR</a>
-      <a href="https://h3ad-sec.github.io/H3AD-LEARN/">H3AD-LEARN</a>
+      <div class="nav-item">
+        <a href="https://h3ad-sec.github.io/H3AD-LEARN/">H3AD-LEARN</a>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-inner">
+            <a href="https://h3ad-sec.github.io/H3AD-LEARN/threat-hunting/index.html" target="_blank"
+              rel="noopener">THREAT HUNTING</a>
+            <a href="https://h3ad-sec.github.io/H3AD-LEARN/lolbas/index.html" target="_blank" rel="noopener">LOLBAS</a>
+            <a href="https://h3ad-sec.github.io/H3AD-LEARN/threat-intel/index.html" target="_blank"
+              rel="noopener">THREAT INTEL</a>
+            <a href="https://h3ad-sec.github.io/H3AD-LEARN/cloud-security/index.html" target="_blank"
+              rel="noopener">CLOUD SECURITY</a>
+            <a href="https://h3ad-sec.github.io/H3AD-LEARN/interview-prep/index.html" target="_blank"
+              rel="noopener">INTERVIEW PREP</a>
+          </div>
+        </div>
+      </div>
       <a href="mailto:h3adsec@gmail.com">CONTACT</a>
     </div>
 
@@ -1399,24 +1900,45 @@
       class="drawer-sub">↳ X-VERDIKT &nbsp;↗</a>
     <a href="https://h3ad-sec.github.io/IOC-VERDIKT/" target="_blank" rel="noopener" onclick="closeDrawer()"
       class="drawer-sub">↳ IOC-VERDIKT &nbsp;↗</a>
-    <a href="https://h3ad-sec.github.io/PARSE-X/" target="_blank" rel="noopener" onclick="closeDrawer()" class="drawer-sub">↳ PARSE-X ↗</a>
-    <a href="https://h3ad-sec.github.io/DNSCOPE/" target="_blank" rel="noopener" onclick="closeDrawer()" class="drawer-sub">↳ DNSCOPE ↗</a>
-    <a href="https://h3ad-sec.github.io/MAILSCOPE/" target="_blank" rel="noopener" onclick="closeDrawer()" class="drawer-sub">↳ MAILSCOPE ↗</a>
-    <a href="https://h3ad-sec.github.io/INFRA-SCOPE/" target="_blank" rel="noopener" onclick="closeDrawer()" class="drawer-sub">↳ INFRA-SCOPE ↗</a>
+    <a href="https://h3ad-sec.github.io/PARSE-X/" target="_blank" rel="noopener" onclick="closeDrawer()"
+      class="drawer-sub">↳ PARSE-X ↗</a>
+    <a href="https://h3ad-sec.github.io/DNSCOPE/" target="_blank" rel="noopener" onclick="closeDrawer()"
+      class="drawer-sub">↳ DNSCOPE ↗</a>
+    <a href="https://h3ad-sec.github.io/MAILSCOPE/" target="_blank" rel="noopener" onclick="closeDrawer()"
+      class="drawer-sub">↳ MAILSCOPE ↗</a>
+    <a href="https://h3ad-sec.github.io/INFRA-SCOPE/" target="_blank" rel="noopener" onclick="closeDrawer()"
+      class="drawer-sub">↳ INFRA-SCOPE ↗</a>
     <a href="https://h3ad-sec.github.io/H3AD-AI/" onclick="closeDrawer()">H3AD-AI</a>
-    <a href="https://h3ad-sec.github.io/PROMPTVAULT/" target="_blank" rel="noopener" onclick="closeDrawer()" class="drawer-sub">↳ PROMPTVAULT ↗</a>
+    <a href="https://h3ad-sec.github.io/PROMPTVAULT/" target="_blank" rel="noopener" onclick="closeDrawer()"
+      class="drawer-sub">↳ PROMPTVAULT ↗</a>
     <a href="https://h3ad-sec.github.io/H3AD-DETECT/" onclick="closeDrawer()">H3AD-DETECT</a>
-    <a href="https://h3ad-sec.github.io/TRACERULES/" target="_blank" rel="noopener" onclick="closeDrawer()" class="drawer-sub">↳ TRACERULES ↗</a>
+    <a href="https://h3ad-sec.github.io/TRACERULES/" target="_blank" rel="noopener" onclick="closeDrawer()"
+      class="drawer-sub">↳ TRACERULES ↗</a>
     <a href="https://h3ad-sec.github.io/H3AD-HUNT/" onclick="closeDrawer()">H3AD-HUNT</a>
     <a href="https://h3ad-sec.github.io/HYPOS/" target="_blank" rel="noopener" onclick="closeDrawer()"
       class="drawer-sub">↳ HYPOS &nbsp;↗</a>
-    <a href="https://h3ad-sec.github.io/PIVEX/" target="_blank" rel="noopener" onclick="closeDrawer()" class="drawer-sub">↳ PIVEX ↗</a>
-    <a href="https://h3ad-sec.github.io/TRACEPULSE/" target="_blank" rel="noopener" onclick="closeDrawer()" class="drawer-sub">↳ TRACEPULSE ↗</a>
+    <a href="https://h3ad-sec.github.io/PIVEX/" target="_blank" rel="noopener" onclick="closeDrawer()"
+      class="drawer-sub">↳ PIVEX ↗</a>
+    <a href="https://h3ad-sec.github.io/TRACEPULSE/" target="_blank" rel="noopener" onclick="closeDrawer()"
+      class="drawer-sub">↳ TRACEPULSE ↗</a>
     <a href="https://h3ad-sec.github.io/H3AD-OPS/" onclick="closeDrawer()">H3AD-OPS</a>
-    <a href="https://h3ad-sec.github.io/QUICKTRACE/" target="_blank" rel="noopener" onclick="closeDrawer()" class="drawer-sub">↳ QUICKTRACE ↗</a>
+    <a href="https://h3ad-sec.github.io/QUICKTRACE/" target="_blank" rel="noopener" onclick="closeDrawer()"
+      class="drawer-sub">↳ QUICKTRACE ↗</a>
+    <a href="https://h3ad-sec.github.io/PHISHOPS/" target="_blank" rel="noopener" onclick="closeDrawer()"
+      class="drawer-sub">↳ PHISHOPS ↗</a>
     <a href="https://h3ad-sec.github.io/H3AD-DF/" onclick="closeDrawer()">H3AD-DF</a>
     <a href="https://h3ad-sec.github.io/H3AD-IR/" onclick="closeDrawer()">H3AD-IR</a>
     <a href="https://h3ad-sec.github.io/H3AD-LEARN/" onclick="closeDrawer()">H3AD-LEARN</a>
+    <a href="https://h3ad-sec.github.io/H3AD-LEARN/threat-hunting/index.html" target="_blank" rel="noopener"
+      onclick="closeDrawer()" class="drawer-sub">↳ THREAT HUNTING ↗</a>
+    <a href="https://h3ad-sec.github.io/H3AD-LEARN/lolbas/index.html" target="_blank" rel="noopener"
+      onclick="closeDrawer()" class="drawer-sub">↳ LOLBAS ↗</a>
+    <a href="https://h3ad-sec.github.io/H3AD-LEARN/threat-intel/index.html" target="_blank" rel="noopener"
+      onclick="closeDrawer()" class="drawer-sub">↳ THREAT INTEL ↗</a>
+    <a href="https://h3ad-sec.github.io/H3AD-LEARN/cloud-security/index.html" target="_blank" rel="noopener"
+      onclick="closeDrawer()" class="drawer-sub">↳ CLOUD SECURITY ↗</a>
+    <a href="https://h3ad-sec.github.io/H3AD-LEARN/interview-prep/index.html" target="_blank" rel="noopener"
+      onclick="closeDrawer()" class="drawer-sub">↳ INTERVIEW PREP ↗</a>
     <a href="mailto:h3adsec@gmail.com" onclick="closeDrawer()">CONTACT</a>
   </div>
 
@@ -1426,208 +1948,177 @@
 
       <!-- HERO -->
       <section class="hero">
-        <span class="hero-tag">H3AD-SEC · whoami</span>
-        <h1 class="hero-title"><span>Hrushikesh Badgujar</span></h1>
-        <p class="hero-sub">SOC Analyst · Detection Engineer · H3AD-SEC</p>
+        <div class="hero-eyebrow">Security Operations · Threat Intel · Threat Hunt<br>DFIR · Malware Analysis ·
+          Detection Engineering</div>
 
-        <!-- TERMINAL -->
-        <div class="terminal">
-          <div class="terminal-bar">
-            <span class="tbar-dot r"></span>
-            <span class="tbar-dot y"></span>
-            <span class="tbar-dot g"></span>
-            <span class="tbar-label">h3ad@h3ad-sec ~ bash</span>
-          </div>
-          <div class="terminal-body">
+        <h1 class="hero-title">Hrushikesh<br><span>Badgujar.</span></h1>
 
-            <div class="t-line">
-              <span class="prompt">root@h3ad-sec:~$</span>
-              <span class="cmd">whoami</span>
-            </div>
-            <div class="t-line gap">
-              <span class="out">
-                <span class="out-acc">Hrushikesh Badgujar</span>
-                <span class="out-dim"> / </span>
-                <span class="out-hl">SOC Analyst · Detection Engineer · H3AD-SEC</span>
-              </span>
-            </div>
+        <p class="hero-sub">Rosh Gadol, not rosh katan. I understand the mission before I execute it.</p>
 
-            <div class="t-line">
-              <span class="prompt">root@h3ad-sec:~$</span>
-              <span class="cmd">cat mission.txt</span>
-            </div>
-            <div class="t-line gap">
-              <span class="out">
-                <span class="out-hl">Operationalizing threat intelligence across the full defensive spectrum. Raw IOC to root cause, hypothesis to detection rule.</span>
-              </span>
-            </div>
-
-            <div class="t-line">
-              <span class="prompt">root@h3ad-sec:~$</span>
-              <span class="cmd">domains --list</span>
-            </div>
-            <div class="t-line gap">
-              <span class="out">
-                <span class="out-hl">Threat Intelligence</span><span class="out-dim"> · </span>
-                <span class="out-hl">APT Tracking</span><span class="out-dim"> · </span>
-                <span class="out-hl">Detection Engineering</span><span class="out-dim"> · </span>
-                <span class="out-hl">DFIR</span><span class="out-dim"> · </span>
-                <span class="out-hl">Threat Hunting</span><span class="out-dim"> · </span>
-                <span class="out-hl">SOC Automation</span>
-              </span>
-            </div>
-
-            <div class="t-line">
-              <span class="prompt">root@h3ad-sec:~$</span>
-              <span class="cmd">status --self</span>
-            </div>
-            <div class="t-line gap">
-              <span class="out">
-                <span class="badge online"><span class="dot"></span>online &amp; building</span>
-              </span>
-            </div>
-
-            <div class="t-line">
-              <span class="prompt">root@h3ad-sec:~$</span>
-              <span class="cursor"></span>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="hero-stats" data-stagger>
-          <div class="stat-chip"><span class="stat-val" data-count="7">7</span><span class="stat-label">MODULES</span></div>
-          <div class="stat-chip"><span class="stat-val" data-count="14">14</span><span class="stat-label">TOOLS LIVE</span></div>
-          <div class="stat-chip"><span class="stat-val" data-count="6">6</span><span class="stat-label">DOMAINS</span></div>
-          <div class="stat-chip"><span class="stat-val">2026</span><span class="stat-label">ACTIVE BUILD</span></div>
+        <div class="hero-stats">
+          <div class="hero-stat"><span class="hero-stat-value">3<span class="hero-stat-unit">Yrs</span></span><span
+              class="hero-stat-label">Security Operations</span></div>
+          <div class="hero-stat"><span class="hero-stat-value">5<span class="hero-stat-unit">Yrs</span></span><span
+              class="hero-stat-label">Cyber Security Field</span></div>
+          <div class="hero-stat"><span class="hero-stat-value">8</span><span class="hero-stat-label">Platform
+              Modules</span></div>
+          <div class="hero-stat"><span class="hero-stat-value">8</span><span
+              class="hero-stat-label">Certifications</span></div>
+          <div class="hero-stat"><span class="hero-stat-value">3</span><span class="hero-stat-label">Published
+              Writeups</span></div>
         </div>
       </section>
 
-      <!-- MOTO -->
-      <div class="manifesto-strip" data-reveal>
-        <p class="manifesto-text">Intelligence without action is noise.<br>Detection without context is blind.<br>Response without understanding is guesswork.<br><span style="font-size:0.65rem;color:var(--muted);letter-spacing:0.06em;">H3AD-SEC closes the gap. Raw threat data to operational defense, hypothesis to detection rule.</span></p>
-      </div>
-
       <!-- ABOUT -->
-      <div class="section-label" data-reveal>ABOUT</div>
+      <div class="section-label" data-reveal>01 / ABOUT</div>
       <div class="bio" data-reveal>
         <p>
-          M.Tech in Cybersecurity from NFSU. 2.5+ years in MDR/XDR SOC operations, treating detection engineering, threat intelligence, and incident response not as separate tracks but as the same job.
-          <span class="acc">H3AD-SEC</span> is where that work compounds.
+          M.Tech in Cybersecurity from NFSU, with 3 years across in-house and managed SOC environments. On any given
+          shift, I might be investigating alerts, working with threat intelligence, hunting threats, fine-tuning
+          detections, looking for automation opportunities, or researching something new.
         </p>
         <p>
-          My work sits at the intersection of <span class="hl">threat intelligence, detection engineering,
-          and incident response</span>, treating them as inseparable disciplines of the same operational reality.
-          I focus on <span class="hl">attacker behavior at the TTP level</span>, translating that understanding
-          into <span class="hl">detection logic that survives real-world noise</span>,
-          and building tooling that makes a lean SOC punch above its weight.
+          Somewhere between investigating alerts, hunting threats, and doing the same things repeatedly, I started
+          building my own tools. The result is <span class="acc">H3AD-SEC</span>, a platform for IOC enrichment,
+          threat hunting, detection engineering, automation, and more.
         </p>
         <p>
-          Every module in this platform is <span class="hl">purpose-built</span>.
-          No demos for demos' sake. If it's here, it solves a real problem in cyber defense operations.
+          <span class="hl">Rosh Gadol, not Rosh Katan</span>: understand the mission first, then build. The same
+          principle guides my investigations: understand the context before reaching a conclusion.
         </p>
+        <p>
+          Every module in H3AD-SEC exists because it solves something I encountered on shift. Built for the work I
+          actually do, not for a demo that looks good.
+        </p>
+      </div>
+      <div class="about-facts" data-reveal>
+        <div class="about-fact">
+          <span class="about-fact-label">Education</span>
+          <span class="about-fact-value">M.Tech Cybersecurity · NFSU</span>
+        </div>
+        <div class="about-fact">
+          <span class="about-fact-label">Current Role</span>
+          <span class="about-fact-value">Associate Specialist · Concentrix</span>
+        </div>
+        <div class="about-fact">
+          <span class="about-fact-label">Approach</span>
+          <span class="about-fact-value">Purpose-built tooling, no demos</span>
+        </div>
       </div>
 
       <!-- EXPERIENCE -->
-      <div class="section-label" data-reveal>EXPERIENCE</div>
+      <div class="section-label" data-reveal>02 / EXPERIENCE</div>
       <div class="exp-list" data-reveal>
         <div class="exp-item">
           <div class="exp-meta">
             <span class="exp-period">May 2024 — Present</span>
             <span class="exp-current"><span class="dot-e"></span>Current</span>
           </div>
-          <span class="exp-role">Associate Specialist - Security Operations</span>
-          <span class="exp-desc">MDR and in-house SOC environment. XDR alert triage, CTI-driven threat hunting, and detection engineering. False positive reduction, detection rule tuning, and SOC automation. IAM operations support.</span>
+          <span class="exp-role">Associate Specialist</span>
+          <span class="exp-company">Concentrix Daksh Services India Pvt. Ltd.</span>
+          <p class="exp-desc">MDR/XDR SOC operations: alert triage, threat hunting, detection engineering, and building the automation the job actually needed.</p>
         </div>
         <div class="exp-item">
           <div class="exp-meta">
-            <span class="exp-period">Oct 2023 — Apr 2024</span>
+            <span class="exp-period">Oct 2023 — May 2024</span>
           </div>
-          <span class="exp-role">Cyber Security Intern · MDR Operations</span>
-          <span class="exp-desc">MDR environment. 24x7 SIEM/EDR/CASM/WAF monitoring. Alert investigation, incident triage, and SOC process improvement.</span>
+          <span class="exp-role">Trainee Cyber, SOC Analyst</span>
+          <span class="exp-company">Gramax Cybersec</span>
+          <p class="exp-desc">24x7 SOC monitoring and incident triage, the entry point into everything that came after.</p>
         </div>
       </div>
 
       <!-- DOMAINS -->
-      <div class="section-label" data-reveal>DOMAINS</div>
+      <div class="section-label" data-reveal>03 / DOMAINS</div>
       <div class="grid" data-stagger>
         <div class="card">
-          <div class="card-title">Threat Intel &amp; APT Tracking</div>
-          <div class="card-desc">Tracking adversary infrastructure, TTPs, and campaigns. Correlating IOCs into structured intelligence that feeds every other discipline.</div>
+          <div class="card-title">Security Operations</div>
+          <div class="card-desc">Alert triage, XDR/EDR monitoring, and SIEM workflows inside a live MDR/XDR SOC
+            environment.</div>
         </div>
         <div class="card">
-          <div class="card-title">Detection Engineering</div>
-          <div class="card-desc">Writing detection logic that reflects attacker behavior, not just indicators. Sigma rules, SIEM tuning, and detection-as-code pipelines.</div>
-        </div>
-        <div class="card">
-          <div class="card-title">DFIR &amp; Malware Analysis</div>
-          <div class="card-desc">From triage to root cause. Artifact collection, memory forensics, and malware behavior analysis to understand exactly what happened.</div>
+          <div class="card-title">Threat Intelligence</div>
+          <div class="card-desc">Tracking adversary infrastructure, TTPs, and campaigns, correlating IOCs into
+            structured intelligence that feeds every other discipline.</div>
         </div>
         <div class="card">
           <div class="card-title">Threat Hunting</div>
-          <div class="card-desc">Hypothesis-driven hunting across endpoint, network, and identity telemetry. Finding what alerts didn't catch, then codifying it.</div>
+          <div class="card-desc">Hypothesis-driven hunting across endpoint, network, and identity telemetry, finding
+            what alerts missed, then codifying it.</div>
         </div>
         <div class="card">
-          <div class="card-title">SOC &amp; SecOps Automation</div>
-          <div class="card-desc">Triage queries, enrichment pipelines, and workflow tooling. Removing analyst toil so teams focus on decisions, not data wrangling.</div>
+          <div class="card-title">Incident Response</div>
+          <div class="card-desc">Containment, eradication, and recovery for active incidents. Root cause before
+            remediation, always.</div>
         </div>
         <div class="card">
-          <div class="card-title">Platform Building</div>
-          <div class="card-desc">H3AD-SEC is an operational cyber defense platform in active development. Each module ships real capability, not demos.</div>
+          <div class="card-title">Digital Forensics</div>
+          <div class="card-desc">Registry, memory, and disk artifact analysis, reconstructing what actually happened on
+            a compromised endpoint after the alert fires.</div>
+        </div>
+        <div class="card">
+          <div class="card-title">Automations</div>
+          <div class="card-desc">Triage queries, enrichment pipelines, and workflow tooling that remove analyst toil so
+            teams focus on decisions, not data wrangling.</div>
+        </div>
+        <div class="card">
+          <div class="card-title">Detection Engineering</div>
+          <div class="card-desc">Detection logic built around attacker behavior, not just indicators: Sigma rules, SIEM
+            tuning, and detection-as-code pipelines.</div>
+        </div>
+        <div class="card">
+          <div class="card-title">AI Security</div>
+          <div class="card-desc">Using LLMs for triage, hunt hypothesis generation, and detection engineering, plus the
+            prompt-injection and AI-abuse risks defenders now have to cover.</div>
         </div>
       </div>
 
       <!-- STACK -->
-      <div class="section-label" data-reveal>STACK</div>
+      <div class="section-label" data-reveal>04 / STACK</div>
       <div class="stack-grid" data-reveal>
         <div class="stack-row">
-          <span class="stack-cat">EDR / XDR</span>
+          <span class="stack-cat">Security Operations</span>
           <div class="stack-tags">
-            <span class="stack-tag">Cortex XDR</span>
-            <span class="stack-tag">XSIAM</span>
-            <span class="stack-tag">CrowdStrike Falcon</span>
+            <span class="stack-tag">SOC Monitoring</span>
+            <span class="stack-tag">Alert Triage &amp; Escalation</span>
+            <span class="stack-tag">Incident Response</span>
+            <span class="stack-tag">Threat Hunting</span>
+            <span class="stack-tag">Phishing Analysis</span>
+            <span class="stack-tag">Playbook Development</span>
+            <span class="stack-tag">MTTR Reduction</span>
           </div>
         </div>
         <div class="stack-row">
-          <span class="stack-cat">CTI</span>
+          <span class="stack-cat">Detection &amp; Query</span>
           <div class="stack-tags">
+            <span class="stack-tag">XQL (Cortex)</span>
+            <span class="stack-tag">CrowdStrike QL (CQL)</span>
+          </div>
+        </div>
+        <div class="stack-row">
+          <span class="stack-cat">Threat Intelligence</span>
+          <div class="stack-tags">
+            <span class="stack-tag">MITRE ATT&amp;CK</span>
+            <span class="stack-tag">Diamond Model</span>
+            <span class="stack-tag">TTP Extraction</span>
+            <span class="stack-tag">IOC Enrichment</span>
+            <span class="stack-tag">STIX/TAXII</span>
             <span class="stack-tag">Recorded Future</span>
             <span class="stack-tag">OpenCTI</span>
           </div>
         </div>
         <div class="stack-row">
-          <span class="stack-cat">Email / DLP</span>
+          <span class="stack-cat">AI in Security</span>
           <div class="stack-tags">
-            <span class="stack-tag">Proofpoint</span>
-            <span class="stack-tag">Clearswift DLP</span>
+            <span class="stack-tag">Microsoft Copilot Agent Dev</span>
+            <span class="stack-tag">Agentic SOC Workflows</span>
+            <span class="stack-tag">Entity Extraction (JSON)</span>
+            <span class="stack-tag">LLM-Assisted Triage</span>
+            <span class="stack-tag">AI-Generated Reporting</span>
           </div>
         </div>
         <div class="stack-row">
-          <span class="stack-cat">IAM</span>
-          <div class="stack-tags">
-            <span class="stack-tag">Okta</span>
-          </div>
-        </div>
-        <div class="stack-row">
-          <span class="stack-cat">Forensics</span>
-          <div class="stack-tags">
-            <span class="stack-tag">Volatility</span>
-            <span class="stack-tag">Sysinternals</span>
-            <span class="stack-tag">Wireshark</span>
-            <span class="stack-tag">Nmap</span>
-            <span class="stack-tag">Snort</span>
-          </div>
-        </div>
-        <div class="stack-row">
-          <span class="stack-cat">Query / Detection</span>
-          <div class="stack-tags">
-            <span class="stack-tag">Cortex XQL</span>
-            <span class="stack-tag">CrowdStrike QL</span>
-            <span class="stack-tag">Sigma</span>
-          </div>
-        </div>
-        <div class="stack-row">
-          <span class="stack-cat">Scripting</span>
+          <span class="stack-cat">Automation &amp; Scripting</span>
           <div class="stack-tags">
             <span class="stack-tag">PowerShell</span>
             <span class="stack-tag">Python</span>
@@ -1635,40 +2126,85 @@
           </div>
         </div>
         <div class="stack-row">
-          <span class="stack-cat">Frameworks</span>
+          <span class="stack-cat">Log &amp; Network Analysis</span>
           <div class="stack-tags">
-            <span class="stack-tag">MITRE ATT&amp;CK</span>
-            <span class="stack-tag">Diamond Model</span>
+            <span class="stack-tag">Windows Event Logs</span>
+            <span class="stack-tag">PCAP Analysis</span>
+            <span class="stack-tag">Wireshark</span>
+            <span class="stack-tag">Network Traffic Monitoring</span>
+          </div>
+        </div>
+        <div class="stack-row">
+          <span class="stack-cat">Malware &amp; Forensics</span>
+          <div class="stack-tags">
+            <span class="stack-tag">Malware Analysis</span>
+            <span class="stack-tag">Memory Forensics (Volatility)</span>
+            <span class="stack-tag">Sysinternals Suite</span>
+          </div>
+        </div>
+        <div class="stack-row">
+          <span class="stack-cat">Security Tools</span>
+          <div class="stack-tags">
+            <span class="stack-tag">Cortex XDR/XSIAM</span>
+            <span class="stack-tag">CrowdStrike Falcon</span>
+            <span class="stack-tag">Okta</span>
+            <span class="stack-tag">Clearswift DLP</span>
+            <span class="stack-tag">Proofpoint</span>
+            <span class="stack-tag">Seceon</span>
+            <span class="stack-tag">Nmap</span>
+            <span class="stack-tag">Snort</span>
+          </div>
+        </div>
+        <div class="stack-row">
+          <span class="stack-cat">Identity &amp; Access</span>
+          <div class="stack-tags">
+            <span class="stack-tag">Okta SSO Configuration</span>
+            <span class="stack-tag">API Integrations</span>
+            <span class="stack-tag">MFA Policy Management</span>
+            <span class="stack-tag">Third-Party App Provisioning</span>
+          </div>
+        </div>
+        <div class="stack-row">
+          <span class="stack-cat">Reporting &amp; Docs</span>
+          <div class="stack-tags">
+            <span class="stack-tag">SOC KPIs</span>
+            <span class="stack-tag">Incident Reports</span>
+            <span class="stack-tag">SOP Creation</span>
           </div>
         </div>
       </div>
 
       <!-- CERTIFICATIONS -->
-      <div class="section-label" data-reveal>CERTIFICATIONS</div>
+      <div class="section-label" data-reveal>05 / CERTIFICATIONS</div>
       <div class="certs-grid" data-stagger>
         <div class="cert-card">
-          <span class="cert-issuer">EC-Council</span>
           <span class="cert-name">Certified Threat Intelligence Analyst</span>
-          <span class="cert-badge earned"><span class="dot-c"></span>Earned</span>
-        </div>
-        <div class="cert-card">
           <span class="cert-issuer">EC-Council</span>
+          <span class="cert-badge earned"><span class="dot-c"></span>Earned</span>
+        </div>
+        <div class="cert-card">
           <span class="cert-name">Certified Ethical Hacker</span>
+          <span class="cert-issuer">EC-Council</span>
           <span class="cert-badge earned"><span class="dot-c"></span>Earned</span>
         </div>
         <div class="cert-card">
-          <span class="cert-issuer">Palo Alto Networks</span>
           <span class="cert-name">Certified Detection &amp; Remediation Analyst</span>
+          <span class="cert-issuer">Palo Alto Networks</span>
           <span class="cert-badge earned"><span class="dot-c"></span>Earned</span>
         </div>
         <div class="cert-card">
-          <span class="cert-issuer">CrowdStrike</span>
+          <span class="cert-name">Security Operations Professional</span>
+          <span class="cert-issuer">Palo Alto Networks</span>
+          <span class="cert-badge earned"><span class="dot-c"></span>Earned</span>
+        </div>
+        <div class="cert-card">
           <span class="cert-name">CrowdStrike QL Fundamentals I &amp; II</span>
+          <span class="cert-issuer">CrowdStrike</span>
           <span class="cert-badge earned"><span class="dot-c"></span>Earned</span>
         </div>
         <div class="cert-card">
-          <span class="cert-issuer">Recorded Future</span>
           <span class="cert-name">Intelligence Fundamentals</span>
+          <span class="cert-issuer">Recorded Future</span>
           <span class="cert-badge earned"><span class="dot-c"></span>Earned</span>
         </div>
         <div class="cert-card">
@@ -1676,34 +2212,14 @@
           <span class="cert-badge earned"><span class="dot-c"></span>Earned</span>
         </div>
         <div class="cert-card">
-          <span class="cert-issuer">EC-Council</span>
           <span class="cert-name">Certified Incident Handler (ECIH)</span>
+          <span class="cert-issuer">EC-Council</span>
           <span class="cert-badge progress"><span class="dot-c"></span>In Progress</span>
         </div>
       </div>
 
-      <!-- WRITING -->
-      <div class="section-label" data-reveal>WRITING</div>
-      <div class="writing-list" data-reveal>
-        <a href="https://medium.com/@hrushikeshbadgujar/what-is-ids-intrusion-detection-system-how-it-works-732d81a13fb5" target="_blank" rel="noopener" class="writing-item">
-          <span class="writing-title">What is IDS (Intrusion Detection System) &amp; How it Works</span>
-          <span class="writing-pub">Medium</span>
-          <span class="writing-arrow">↗</span>
-        </a>
-        <a href="https://medium.com/@hrushikeshbadgujar/demystifying-firewalls-exploring-types-rule-parameters-and-real-world-examples-548602ac9958" target="_blank" rel="noopener" class="writing-item">
-          <span class="writing-title">Demystifying Firewalls: Types, Rule Parameters &amp; Real-World Examples</span>
-          <span class="writing-pub">Medium</span>
-          <span class="writing-arrow">↗</span>
-        </a>
-        <a href="https://medium.com/@hrushikeshbadgujar/ips-unraveled-decoding-cyber-protection-58648581edbe" target="_blank" rel="noopener" class="writing-item">
-          <span class="writing-title">IPS Unraveled: Decoding Cyber Protection</span>
-          <span class="writing-pub">Medium</span>
-          <span class="writing-arrow">↗</span>
-        </a>
-      </div>
-
       <!-- PRINCIPLES -->
-      <div class="section-label" data-reveal>OPERATING PRINCIPLES</div>
+      <div class="section-label" data-reveal>06 / OPERATING PRINCIPLES</div>
       <div class="principles" data-stagger>
         <div class="principle">
           <span class="p-num">01</span>
@@ -1732,93 +2248,147 @@
         </div>
       </div>
 
-      <!-- PLATFORM MODULES -->
-      <div class="section-label" data-reveal>PLATFORM</div>
-      <div class="modules" data-stagger>
-        <a href="https://h3ad-sec.github.io/H3AD-X/" class="module-link">
-          <span class="ml-name">H3AD-X</span>
-          <span class="ml-desc">IOC enrichment across 11 sources. Deep IP analysis, artifact extraction, DNS infrastructure mapping.</span>
-          <span class="ml-status live"><span class="dot-s"></span>Live</span>
+      <!-- WRITING -->
+      <div class="section-label" data-reveal>07 / WRITING</div>
+      <div class="writing-list" data-reveal>
+        <a href="https://medium.com/@hrushikeshbadgujar/what-is-ids-intrusion-detection-system-how-it-works-732d81a13fb5"
+          target="_blank" rel="noopener" class="writing-item">
+          <span class="writing-title">What is IDS (Intrusion Detection System) &amp; How it Works</span>
+          <span class="writing-pub">Medium</span>
+          <span class="writing-arrow">↗</span>
         </a>
-        <a href="https://h3ad-sec.github.io/H3AD-AI/" class="module-link">
-          <span class="ml-name">H3AD-AI</span>
-          <span class="ml-desc">Seven AI tools for SOC workflows: runbooks, query generation, FP analysis, ATT&CK mapping, timeline reconstruction, malware analysis, and prompt library.</span>
-          <span class="ml-status live"><span class="dot-s"></span>Live</span>
+        <a href="https://medium.com/@hrushikeshbadgujar/demystifying-firewalls-exploring-types-rule-parameters-and-real-world-examples-548602ac9958"
+          target="_blank" rel="noopener" class="writing-item">
+          <span class="writing-title">Demystifying Firewalls: Types, Rule Parameters &amp; Real-World Examples</span>
+          <span class="writing-pub">Medium</span>
+          <span class="writing-arrow">↗</span>
         </a>
-        <a href="https://h3ad-sec.github.io/H3AD-DETECT/" class="module-link">
-          <span class="ml-name">H3AD-DETECT</span>
-          <span class="ml-desc">MITRE-mapped detection query arsenal. KQL, Sigma, XQL, organized by tactic, platform, and data source.</span>
-          <span class="ml-status live"><span class="dot-s"></span>Live</span>
-        </a>
-        <a href="https://h3ad-sec.github.io/H3AD-HUNT/" class="module-link">
-          <span class="ml-name">H3AD-HUNT</span>
-          <span class="ml-desc">Hypothesis-driven hunting. Pivot graph for infrastructure analysis, CVE-tied query packs, structured hunt methodology.</span>
-          <span class="ml-status live"><span class="dot-s"></span>Live</span>
-        </a>
-        <a href="https://h3ad-sec.github.io/H3AD-OPS/" class="module-link">
-          <span class="ml-name">H3AD-OPS</span>
-          <span class="ml-desc">Pre-built triage queries across auth, network, endpoint, and cloud. Built for shift analysts.</span>
-          <span class="ml-status live"><span class="dot-s"></span>Live</span>
-        </a>
-        <a href="https://h3ad-sec.github.io/H3AD-DF/" class="module-link">
-          <span class="ml-name">H3AD-DF</span>
-          <span class="ml-desc">Forensic analysis, artifact recovery, and memory analysis workflows.</span>
-          <span class="ml-status live"><span class="dot-s"></span>Live</span>
-        </a>
-        <a href="https://h3ad-sec.github.io/H3AD-IR/" class="module-link">
-          <span class="ml-name">H3AD-IR</span>
-          <span class="ml-desc">Structured containment, eradication, and recovery playbooks for active incidents.</span>
-          <span class="ml-status live"><span class="dot-s"></span>Live</span>
-        </a>
-        <a href="https://h3ad-sec.github.io/H3AD-LEARN/" class="module-link">
-          <span class="ml-name">H3AD-LEARN</span>
-          <span class="ml-desc">Modular security learning hub. Threat hunting and LOLBAS methodology, chapter by chapter.</span>
-          <span class="ml-status live"><span class="dot-s"></span>Live</span>
-        </a>
-        <a href="mailto:h3adsec@gmail.com" class="module-link">
-          <span class="ml-name">CONTACT</span>
-          <span class="ml-desc">Collaboration, research exchange, threat intel sharing.</span>
-          <span class="ml-arrow">↗</span>
+        <a href="https://medium.com/@hrushikeshbadgujar/ips-unraveled-decoding-cyber-protection-58648581edbe"
+          target="_blank" rel="noopener" class="writing-item">
+          <span class="writing-title">IPS Unraveled: Decoding Cyber Protection</span>
+          <span class="writing-pub">Medium</span>
+          <span class="writing-arrow">↗</span>
         </a>
       </div>
 
+      <!-- PLATFORM MODULES -->
+      <div class="section-label" data-reveal>08 / PLATFORM</div>
+      <div class="tool-features" data-stagger>
+        <div class="tool-feature" style="--tf-rgb:0,212,255;">
+          <div class="tf-header">
+            <div class="tf-header-text">
+              <div class="tf-name">H3AD-X</div>
+              <div class="tf-tagline">Threat Intelligence Hub</div>
+            </div>
+            <span class="card-badge badge-live">LIVE</span>
+          </div>
+          <div class="tf-body">IOC enrichment, artifact extraction, and DNS infrastructure mapping across six tools,
+            managed and BYOK.</div>
+          <a class="tf-link" href="https://h3ad-sec.github.io/H3AD-X/">OPEN H3AD-X →</a>
+        </div>
+        <div class="tool-feature" style="--tf-rgb:139,92,246;">
+          <div class="tf-header">
+            <div class="tf-header-text">
+              <div class="tf-name">H3AD-AI</div>
+              <div class="tf-tagline">AI-Assisted Analysis Hub</div>
+            </div>
+            <span class="card-badge badge-live">LIVE</span>
+          </div>
+          <div class="tf-body">PROMPTVAULT — ready-to-use AI prompts for SOC triage, detection engineering, and threat
+            hunting.</div>
+          <a class="tf-link" href="https://h3ad-sec.github.io/H3AD-AI/">OPEN H3AD-AI →</a>
+        </div>
+        <div class="tool-feature" style="--tf-rgb:245,158,11;">
+          <div class="tf-header">
+            <div class="tf-header-text">
+              <div class="tf-name">H3AD-DETECT</div>
+              <div class="tf-tagline">Detection Engineering Platform</div>
+            </div>
+            <span class="card-badge badge-live">LIVE</span>
+          </div>
+          <div class="tf-body">MITRE-mapped detection query arsenal — KQL, Sigma, XQL, organized by tactic, platform,
+            and data source.</div>
+          <a class="tf-link" href="https://h3ad-sec.github.io/H3AD-DETECT/">OPEN H3AD-DETECT →</a>
+        </div>
+        <div class="tool-feature" style="--tf-rgb:20,184,166;">
+          <div class="tf-header">
+            <div class="tf-header-text">
+              <div class="tf-name">H3AD-HUNT</div>
+              <div class="tf-tagline">Threat Hunting Platform</div>
+            </div>
+            <span class="card-badge badge-live">LIVE</span>
+          </div>
+          <div class="tf-body">Hypothesis-driven hunting: ATT&amp;CK-native hypotheses, a pivot graph for infrastructure
+            analysis, and CVE-tied query packs.</div>
+          <a class="tf-link" href="https://h3ad-sec.github.io/H3AD-HUNT/">OPEN H3AD-HUNT →</a>
+        </div>
+        <div class="tool-feature" style="--tf-rgb:99,102,241;">
+          <div class="tf-header">
+            <div class="tf-header-text">
+              <div class="tf-name">H3AD-OPS</div>
+              <div class="tf-tagline">SecOps Automation</div>
+            </div>
+            <span class="card-badge badge-live">LIVE</span>
+          </div>
+          <div class="tf-body">Pre-built triage queries for shift analysts, plus a phishing case tracker that aggregates
+            IOCs automatically.</div>
+          <a class="tf-link" href="https://h3ad-sec.github.io/H3AD-OPS/">OPEN H3AD-OPS →</a>
+        </div>
+        <div class="tool-feature tf-soon" style="--tf-rgb:107,114,128;">
+          <div class="tf-header">
+            <div class="tf-header-text">
+              <div class="tf-name">H3AD-DF</div>
+              <div class="tf-tagline">Digital Forensics</div>
+            </div>
+            <span class="card-badge badge-soon">PLANNED</span>
+          </div>
+          <div class="tf-body">Registry persistence lookup, memory forensics, and disk artifact analysis. First tools
+            ship here as they're ready.</div>
+          <span class="tf-link tf-link-soon">COMING SOON</span>
+        </div>
+        <div class="tool-feature tf-soon" style="--tf-rgb:107,114,128;">
+          <div class="tf-header">
+            <div class="tf-header-text">
+              <div class="tf-name">H3AD-IR</div>
+              <div class="tf-tagline">Incident Response</div>
+            </div>
+            <span class="card-badge badge-soon">PLANNED</span>
+          </div>
+          <div class="tf-body">Structured containment, eradication, and recovery playbooks for active incidents.</div>
+          <span class="tf-link tf-link-soon">COMING SOON</span>
+        </div>
+        <div class="tool-feature" style="--tf-rgb:34,197,94;">
+          <div class="tf-header">
+            <div class="tf-header-text">
+              <div class="tf-name">H3AD-LEARN</div>
+              <div class="tf-tagline">Security Training Platform</div>
+            </div>
+            <span class="card-badge badge-live">LIVE</span>
+          </div>
+          <div class="tf-body">Field-focused training across five live domains, from threat hunting to interview prep,
+            sourced from real SOC methodology.</div>
+          <a class="tf-link" href="https://h3ad-sec.github.io/H3AD-LEARN/">OPEN H3AD-LEARN →</a>
+        </div>
+      </div>
+
       <!-- CONTACT -->
-      <div class="section-label" data-reveal>CONTACT</div>
-      <div class="contact-wrap" data-reveal>
-        <div class="contact-row">
-          <span class="c-prompt">root@h3ad-sec:~$</span>
-          <span class="c-cmd">cat contact.json</span>
-        </div>
-        <div class="contact-row">
-          <span class="c-out">
-            <a href="mailto:h3adsec@gmail.com" class="c-email">h3adsec@gmail.com</a>
-            <span class="c-note">&nbsp;— collaboration · threat intel sharing · research exchange</span>
-          </span>
-        </div>
-        <div class="contact-row">
-          <span class="c-out">
-            <a href="https://www.linkedin.com/in/hrushikesh-badgujar/" target="_blank" rel="noopener" class="c-email">linkedin.com/in/hrushikesh-badgujar</a>
-            <span class="c-note">&nbsp;— professional network · H3AD-SEC updates</span>
-          </span>
-        </div>
-        <div class="contact-row">
-          <span class="c-out">
-            <a href="https://github.com/h3ad-sec" target="_blank" rel="noopener" class="c-email">github.com/h3ad-sec</a>
-            <span class="c-note">&nbsp;— platform source · open detection engineering</span>
-          </span>
-        </div>
-        <div class="contact-row">
-          <span class="c-out">
-            <a href="https://medium.com/@hrushikeshbadgujar" target="_blank" rel="noopener" class="c-email">medium.com/@hrushikeshbadgujar</a>
-            <span class="c-note">&nbsp;— security writeups · IDS · Firewalls · IPS</span>
-          </span>
-        </div>
-        <div class="contact-row">
-          <span class="c-out">
-            <a href="https://www.linkedin.com/company/h3ad-sec/" target="_blank" rel="noopener" class="c-email">linkedin.com/company/h3ad-sec</a>
-            <span class="c-note">&nbsp;— H3AD-SEC platform · follow for updates</span>
-          </span>
-        </div>
+      <div class="section-label" data-reveal>09 / CONTACT</div>
+      <div class="contact-list" data-reveal>
+        <a href="mailto:h3adsec@gmail.com" class="contact-item">
+          <span class="contact-label">Email</span>
+          <span class="c-email">h3adsec@gmail.com</span>
+          <span class="c-note">Collaboration · threat intel sharing · research exchange</span>
+        </a>
+        <a href="https://www.linkedin.com/in/hrushikesh-badgujar/" target="_blank" rel="noopener" class="contact-item">
+          <span class="contact-label">LinkedIn</span>
+          <span class="c-email">linkedin.com/in/hrushikesh-badgujar</span>
+          <span class="c-note">Professional network · H3AD-SEC updates</span>
+        </a>
+        <a href="https://www.linkedin.com/company/h3ad-sec/" target="_blank" rel="noopener" class="contact-item">
+          <span class="contact-label">Company</span>
+          <span class="c-email">linkedin.com/company/h3ad-sec</span>
+          <span class="c-note">H3AD-SEC platform · follow for updates</span>
+        </a>
       </div>
 
     </div><!-- /page -->
@@ -1829,7 +2399,8 @@
     <span class="footer-left">H3AD-SEC © 2026</span>
     <span class="footer-right">Intelligence. Detection. Response.</span>
     <div class="footer-credit-row">
-      <a class="footer-credit-pill" href="https://www.linkedin.com/in/hrushikesh-badgujar/" target="_blank" rel="noopener" title="Connect on LinkedIn">
+      <a class="footer-credit-pill" href="https://www.linkedin.com/in/hrushikesh-badgujar/" target="_blank"
+        rel="noopener" title="Connect on LinkedIn">
         <span class="credit-tool"><span class="xv-pill-accent">H3AD</span></span>
         <span class="credit-by">created by</span>
         <span class="credit-name">H3AD</span>
@@ -1927,7 +2498,7 @@
     const nav = document.querySelector('.nav');
     window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 10), { passive: true });
 
-    (function(){var pill=document.getElementById('xv-nav-pill'),links=document.querySelector('.nav-links'),toggle=document.querySelector('.theme-toggle'),G=20;function check(){if(!links)return;document.body.classList.remove('nav-compact');links.style.visibility='hidden';var lr=links.getBoundingClientRect(),pr=pill?pill.getBoundingClientRect().right:60,tl=toggle?toggle.getBoundingClientRect().left:window.innerWidth-60;links.style.visibility='';document.body.classList.toggle('nav-compact',(pr+G>lr.left)||(lr.right+G>tl));}check();window.addEventListener('resize',check);})();
+    (function () { var pill = document.getElementById('xv-nav-pill'), links = document.querySelector('.nav-links'), toggle = document.querySelector('.theme-toggle'), G = 20; function check() { if (!links) return; document.body.classList.remove('nav-compact'); links.style.visibility = 'hidden'; var lr = links.getBoundingClientRect(), pr = pill ? pill.getBoundingClientRect().right : 60, tl = toggle ? toggle.getBoundingClientRect().left : window.innerWidth - 60; links.style.visibility = ''; document.body.classList.toggle('nav-compact', (pr + G > lr.left) || (lr.right + G > tl)); } check(); window.addEventListener('resize', check); })();
 
   </script>
 
